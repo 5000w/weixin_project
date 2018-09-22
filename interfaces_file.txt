@@ -1,6 +1,7 @@
 # url
-# input
+# input 
 # output
+# method 没有input就是get 有input就是post
 
 
 1.login
