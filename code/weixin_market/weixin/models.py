@@ -47,6 +47,17 @@ class Class_info(models.Model):
     class_percent = models.IntegerField(default=0,validators=[MaxValueValidator(100),MinValueValidator(0)]) #课程的百分比
 
 
+#商品
+class Goods(models.Model):
+    goods_name = models.CharField(max_length=50)  # 商品名字
+    count = models.IntegerField(default=0)
+    image_url = models.CharField(max_length=100,default=None)
+
+class Car_info(models.Model):
+    goods= models.ForeignKey(Goods,on_delete=models.CASCADE,default=None)  # 购物车
+    weixin_user = models.ForeignKey(Weixin_user, on_delete=models.CASCADE)
+
+
 # class Goods(models.Model):
 #     goods_name = models.CharField(max_length=50)
 #     goods_count = models.IntegerField(default=0)
