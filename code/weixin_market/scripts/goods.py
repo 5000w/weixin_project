@@ -31,3 +31,5 @@ def del_car(id,goods_id_list):
 def run():
     #add_goods_car(3,2)
     #print(get_goods(3))
+    pass
+

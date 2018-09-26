@@ -33,7 +33,7 @@ class Order_info(models.Model):
         ("GENERATE","已生成"),
         ("PAY","已付款"),
     )
-    account_info = models.ForeignKey(Account_info,on_delete=models.CASCADE)
+    weixin_user = models.ForeignKey(Weixin_user, on_delete=models.CASCADE,default=None)
     start_time = models.DateTimeField(auto_now_add=True)                         #生成的时间
     update_time = models.DateTimeField(auto_now=True)                            #更新时间
     state = models.CharField(max_length=50,choices=state_choice,default="CLOSE") #订单的状态
@@ -45,7 +45,10 @@ class Class_info(models.Model):
     order_id = models.ForeignKey(Order_info,on_delete=models.CASCADE,default=None) #订单id
     class_name = models.CharField(max_length=50)    #课程的名字
     class_percent = models.IntegerField(default=0,validators=[MaxValueValidator(100),MinValueValidator(0)]) #课程的百分比
-
+    phone_number = models.CharField(max_length=50)
+    pwd = models.CharField(max_length=50,default=None)
+    school_name = models.CharField(max_length=50,default=None)
+    type = models.IntegerField(default=0) #1为智慧树 2为超星
 
 #商品
 class Goods(models.Model):

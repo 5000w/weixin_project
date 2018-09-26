@@ -7,7 +7,7 @@ from .login_interface.login_operation import write_login_header, generate_header
 import requests
 from weixin_market.settings import *
 from scripts.coupon import login_add_coupon
-import pay
+from . import pay
 
 # Create your views here.
 logger = logging.getLogger("weixin.view")

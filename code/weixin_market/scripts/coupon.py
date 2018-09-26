@@ -13,8 +13,8 @@ def login_test(open_id):
     print(obj.id)
 
 ####注册时给用户添加优惠卷
-def login_add_coupon(openid):
-    user = Weixin_user.objects.get(openid=openid)
+def login_add_coupon(id):
+    user = Weixin_user.objects.get(id=id)
     user.coupon_set.create(price='login',state=1)
     user.coupon_set.create(price='share_once',state=1,start_time=timezone.now())
     user.coupon_set.create(price='share_twice',state=1,start_time=timezone.now())
