@@ -3,11 +3,12 @@ from django.shortcuts import render
 from django.http import JsonResponse, HttpResponse
 from .config import CODE2SESSION, Order_url
 from .models import Weixin_user
-from .login_interface.login_operation import write_login_header, generate_header_value
+from .login_interface.login_operation import write_login_header, generate_header_value , check_header
 import requests
 from weixin_market.settings import *
-from scripts.coupon import login_add_coupon
+from scripts.coupon import *
 from . import pay
+from scripts import *
 
 # Create your views here.
 logger = logging.getLogger("weixin.view")
@@ -21,13 +22,15 @@ def user_login(request):
         if Weixin_user.objects.filter(openid=result["openid"]):
             logger.error("已有用户")
         else:
+
             Weixin_user(openid=result["openid"]).save()
+            login_add_coupon(result["openid"])  # 优惠卷初始化
     except KeyError:
         logger.error(f'error code cant get openid')
         return JsonResponse({"succ": False, "msg": "get openid fault", "data": {}})
     header_info = generate_header_value(result["openid"])
     write_login_header(result["openid"], header_info)  # 写入redis登陆header
-    login_add_coupon(result["openid"])  # 优惠卷初始化
+
     re_json = {"succ": True, "msg": "", "data": header_info}
     return JsonResponse(re_json)
 
@@ -104,3 +107,23 @@ def payback(request):
         return HttpResponse("""<xml><return_code><![CDATA[SUCCESS]]></return_code>
                             <return_msg><![CDATA[OK]]></return_msg></xml>""",
                             content_type='text/xml', status=200)
+
+def get_id():
+    pass
+
+@check_header
+def get_coupon(request):
+    id = get_id()
+    list = get_coupon_db(id)
+    re_json = {"succ": True, "msg": "操作成功", "data": {'list' : list}}
+    return JsonResponse(re_json)
+
+
+@check_header
+def set_coupon_sta(request):
+    id = get_id()
+    get_data = json.loads(request.body)
+    update_coupon(id,get_data['price'],get_data['state'])
+    re_json = {"succ": True, "msg": "操作成功", "data": {}}
+    return JsonResponse(re_json)
+

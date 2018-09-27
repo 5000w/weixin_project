@@ -10,6 +10,7 @@ TEMPLATE_OPENID_KEY = Template(_OPENID_KEY)
 LIVE_TIME = 5 * 60
 
 
+
 def check_header(func):
     def _func(request):
         request_data = json.loads(request.body)
