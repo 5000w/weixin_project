@@ -2,6 +2,8 @@ from utils.redis_utils import write_to_redis, del_from_redis, read_from_redis, p
 import time
 from django.http import JsonResponse
 from string import Template
+from weixin.models import Weixin_user
+
 import json
 _OPENID_KEY = f'user_$openid'
 
@@ -28,6 +30,12 @@ def check_header(func):
 
     return _func
 
+
+def get_id_by_openid(request):
+    header = request.META
+    openid = header.get("openid")
+    user = Weixin_user.objects.get(openid=openid)
+    return user.id
 
 def generate_header_value(openid):
     return {"time": int(time.time()), "openid": openid}

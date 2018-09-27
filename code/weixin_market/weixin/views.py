@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.http import JsonResponse, HttpResponse
 from .config import CODE2SESSION, Order_url
 from .models import Weixin_user
-from .login_interface.login_operation import write_login_header, generate_header_value , check_header
+from .login_interface.login_operation import write_login_header, generate_header_value , check_header ,get_id_by_openid
 import requests
 from weixin_market.settings import *
 from scripts.coupon import *
@@ -108,12 +108,11 @@ def payback(request):
                             <return_msg><![CDATA[OK]]></return_msg></xml>""",
                             content_type='text/xml', status=200)
 
-def get_id():
-    pass
+
 
 @check_header
 def get_coupon(request):
-    id = get_id()
+    id = get_id_by_openid(request)
     list = get_coupon_db(id)
     re_json = {"succ": True, "msg": "操作成功", "data": {'list' : list}}
     return JsonResponse(re_json)
@@ -121,7 +120,7 @@ def get_coupon(request):
 
 @check_header
 def set_coupon_sta(request):
-    id = get_id()
+    id = get_id_by_openid()
     get_data = json.loads(request.body)
     update_coupon(id,get_data['price'],get_data['state'])
     re_json = {"succ": True, "msg": "操作成功", "data": {}}
