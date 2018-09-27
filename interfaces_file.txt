@@ -3,6 +3,7 @@
 # output
 # method 没有input就是get 有input就是post
 
+gsgs
 
 1.login
 url: https://www.saber-toothed.xyz/wx/login
