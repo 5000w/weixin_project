@@ -12,11 +12,15 @@ LIVE_TIME = 5 * 60
 
 def check_header(func):
     def _func(request):
-        request_data = json.loads(request.body)
-        openid = request_data["openid"]  #获取前端的openid
-        request_header = request_data["header"]
+        header = request.META
+        openid = header.get("openid")  #获取前端的openid
+        time = header.get("time")
         redis_header = get_header_from_redis(openid)
-        if redis_header["openid"] != request_header["openid"] or redis_header["time"] != request_header["time"]:
+        try:
+            if redis_header["openid"] != openid or redis_header["time"] != time:
+                rsp = {"succ": False, "data": {}, "msg": "header 验证失败"}
+                return JsonResponse(rsp)
+        except KeyError:
             rsp = {"succ": False, "data": {}, "msg": "header 验证失败"}
             return JsonResponse(rsp)
         func(request)
@@ -42,7 +46,7 @@ def del_login_header(openid):
 
 
 def get_header_from_redis(openid):
-    key = TEMPLATE_OPENID_KEY.substitute({"openid": openid})
+    key = TEMPLATE_OPENID_KEY.substitute({"openid": openid}) 
     return read_from_redis_hash(key)
 
 
