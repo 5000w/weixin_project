@@ -1,4 +1,4 @@
-from utils.redis_utils import write_to_redis, del_from_redis, read_from_redis, prolong_redis_key
+from utils.redis_utils import write_to_redis, del_from_redis, read_from_redis, prolong_redis_key,write_to_redis_hash,read_from_redis_hash
 import time
 from django.http import JsonResponse
 from string import Template
@@ -16,7 +16,7 @@ def check_header(func):
         openid = request_data["openid"]  #获取前端的openid
         request_header = request_data["header"]
         redis_header = get_header_from_redis(openid)
-        if request_header != redis_header:
+        if redis_header["openid"] != request_header["openid"] or redis_header["time"] != request_header["time"]:
             rsp = {"succ": False, "data": {}, "msg": "header 验证失败"}
             return JsonResponse(rsp)
         func(request)
@@ -30,8 +30,11 @@ def generate_header_value(openid):
 
 def write_login_header(openid, header_info):
     key = TEMPLATE_OPENID_KEY.substitute({"openid": openid})
-    return True if write_to_redis(key, header_info, ex=LIVE_TIME) else False
-
+    result = write_to_redis_hash(key, header_info)
+    if result:
+        update_login_header_time(openid)
+        return True
+    return False
 
 def del_login_header(openid):
     key = TEMPLATE_OPENID_KEY.substitute({"openid": openid})
@@ -40,7 +43,7 @@ def del_login_header(openid):
 
 def get_header_from_redis(openid):
     key = TEMPLATE_OPENID_KEY.substitute({"openid": openid})
-    return read_from_redis(key)
+    return read_from_redis_hash(key)
 
 
 def update_login_header_time(openid):
