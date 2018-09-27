@@ -1,4 +1,4 @@
-from utils.redis_utils import write_to_redis, del_from_redis, read_from_redis, prolong_redis_key,write_to_redis_hash,read_from_redis_hash
+from utils.redis_utils import write_to_redis, del_from_redis, read_from_redis, prolong_redis_key, write_to_redis_hash, read_from_redis_hash
 import time
 from django.http import JsonResponse
 from string import Template
@@ -49,13 +49,14 @@ def write_login_header(openid, header_info):
         return True
     return False
 
+
 def del_login_header(openid):
     key = TEMPLATE_OPENID_KEY.substitute({"openid": openid})
     return True if del_from_redis(key) else False
 
 
 def get_header_from_redis(openid):
-    key = TEMPLATE_OPENID_KEY.substitute({"openid": openid}) 
+    key = TEMPLATE_OPENID_KEY.substitute({"openid": openid})
     return read_from_redis_hash(key)
 
 

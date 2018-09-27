@@ -1,9 +1,9 @@
 # miniprogram config file
 from string import Template
 
-APPID = 'wxa1d355f769c6075b'
+APPID = 'wxade43df560e74b6c'
 
-APPSECRET = 'a490035bf5db169434c881c84c7126d1'
+APPSECRET = '4e62b8f7d726f5340c9d8137a20d243d'
 
 Mch_id = ""
 Mch_key = ""
