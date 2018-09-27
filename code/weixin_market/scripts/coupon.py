@@ -13,11 +13,11 @@ def login_test(open_id):
     print(obj.id)
 
 ####注册时给用户添加优惠卷
-def login_add_coupon(id):
-    user = Weixin_user.objects.get(id=id)
+def login_add_coupon(openid):
+    user = Weixin_user.objects.get(openid=openid)
     user.coupon_set.create(price='login',state=1)
-    user.coupon_set.create(price='share_once',state=1,start_time=timezone.now())
-    user.coupon_set.create(price='share_twice',state=1,start_time=timezone.now())
+    user.coupon_set.create(price='share_once',state=0,start_time=timezone.now())
+    user.coupon_set.create(price='share_twice',state=0,start_time=timezone.now())
 
 ###设置优惠卷的状态
 def update_coupon(id,price,state):
@@ -25,7 +25,7 @@ def update_coupon(id,price,state):
     user.coupon_set.filter(price=price).update(state=state)
 
 ##查看某个用户的优惠卷状态
-def get_coupon(id):
+def get_coupon_db(id):
     user = Weixin_user.objects.get(id=id)
     return [{'price' : obj.price,'state' : obj.state} for obj in user.coupon_set.filter()]
 
