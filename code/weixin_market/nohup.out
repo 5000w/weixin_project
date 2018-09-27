@@ -1,0 +1,77 @@
+Internal Server Error: /wx/login
+Traceback (most recent call last):
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin/views.py", line 18, in user_login
+    get_data = json.loads(request.body)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/json/__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[27/Sep/2018 18:06:28] "GET /wx/login HTTP/1.0" 500 78927
+Not Found: /favicon.ico
+[27/Sep/2018 18:06:29] "GET /favicon.ico HTTP/1.0" 404 2082
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 27, 2018 - 17:58:44
+Django version 2.1, using settings 'weixin_market.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[27/Sep/2018 18:07:45] "GET /wx/login HTTP/1.0" 200 69
+[27/Sep/2018 18:08:34] "GET /wx/login HTTP/1.0" 200 69
+Not Found: /wx/log
+[27/Sep/2018 18:08:38] "GET /wx/log HTTP/1.0" 404 2499
+Internal Server Error: /wx/get_coupon
+Traceback (most recent call last):
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin/views.py", line 18, in user_login
+    get_data = json.loads(request.body)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/json/__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[27/Sep/2018 18:08:55] "GET /wx/get_coupon HTTP/1.0" 500 79587
+[27/Sep/2018 21:40:29] "POST /wx/login HTTP/1.0" 200 69
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 27, 2018 - 18:07:36
+Django version 2.1, using settings 'weixin_market.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Internal Server Error: /wx/login
+Traceback (most recent call last):
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin/views.py", line 18, in user_login
+    get_data = json.loads(request.body)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/json/__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[27/Sep/2018 21:53:51] "GET /wx/login HTTP/1.0" 500 79527
+Not Found: /favicon.ico
+[27/Sep/2018 21:53:51] "GET /favicon.ico HTTP/1.0" 404 2082
