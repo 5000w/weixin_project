@@ -24,5 +24,7 @@ def login_add_coupon(openid):
     print(user.coupon_set.count())
 
 def run():
-    login_test('test144'+str(1234))
+    #login_test('test144'+str(1234))
     #login_add_coupon('test')
+    list1 = [{'courseName': '现代市场营销素质与能力提升', 'planProgress': '5.6%'},{'....'},{'....'}]
+    list2 = ['现代市场营销素质与能力提升','现代市场营销素质与能力提升']

@@ -159,57 +159,57 @@ if auth_pass:
 else:
     logger.warning('[Failed] '+ user + ' failed to login!')
  """
-
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'formatters': {
-        'standard': {
-            'format': '%(asctime)s [%(threadName)s:%(thread)d] [%(name)s:%(lineno)d] [%(module)s:%(funcName)s] [%(levelname)s]- %(message)s'}  # 日志格式
-    },
-    'filters': {
-    },
-    'handlers': {
-        'default': {
-            'level': 'DEBUG',
-            'class': 'logging.handlers.RotatingFileHandler',
-            'filename': './weixin/log/all.log',  # 日志输出文件
-            'maxBytes': 1024*1024*5,  # 文件大小
-            'backupCount': 5,  # 备份份数
-            'formatter': 'standard',  # 使用哪种formatters日志格式
-        },
-        'error': {
-            'level': 'ERROR',
-            'class': 'logging.handlers.RotatingFileHandler',
-            'filename': './weixin/log/error.log',
-            'maxBytes': 1024*1024*5,
-            'backupCount': 5,
-            'formatter': 'standard',
-        },
-        'warning': {
-            'level': 'WARNING',
-            'class': 'logging.handlers.RotatingFileHandler',
-            'filename': './weixin/log/warning.log',
-            'maxBytes': 1024*1024*5,
-            'backupCount': 5,
-            'formatter': 'standard',
-        },
-        'console': {
-            'level': 'DEBUG',
-            'class': 'logging.StreamHandler',
-            'formatter': 'standard'
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['default', 'console'],
-            'level': 'DEBUG',
-            'propagate': False
-        },
-        'weixin.views': {
-            'handlers': ['console', 'default', 'warning', 'error'],
-            'level': 'DEBUG',
-            'propagate': True
-        },
-    }
-}
+#
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'formatters': {
+#         'standard': {
+#             'format': '%(asctime)s [%(threadName)s:%(thread)d] [%(name)s:%(lineno)d] [%(module)s:%(funcName)s] [%(levelname)s]- %(message)s'}  # 日志格式
+#     },
+#     'filters': {
+#     },
+#     'handlers': {
+#         'default': {
+#             'level': 'DEBUG',
+#             'class': 'logging.handlers.RotatingFileHandler',
+#             'filename': './weixin/log/all.log',  # 日志输出文件
+#             'maxBytes': 1024*1024*5,  # 文件大小
+#             'backupCount': 5,  # 备份份数
+#             'formatter': 'standard',  # 使用哪种formatters日志格式
+#         },
+#         'error': {
+#             'level': 'ERROR',
+#             'class': 'logging.handlers.RotatingFileHandler',
+#             'filename': './weixin/log/error.log',
+#             'maxBytes': 1024*1024*5,
+#             'backupCount': 5,
+#             'formatter': 'standard',
+#         },
+#         'warning': {
+#             'level': 'WARNING',
+#             'class': 'logging.handlers.RotatingFileHandler',
+#             'filename': './weixin/log/warning.log',
+#             'maxBytes': 1024*1024*5,
+#             'backupCount': 5,
+#             'formatter': 'standard',
+#         },
+#         'console': {
+#             'level': 'DEBUG',
+#             'class': 'logging.StreamHandler',
+#             'formatter': 'standard'
+#         },
+#     },
+#     'loggers': {
+#         'django': {
+#             'handlers': ['default', 'console'],
+#             'level': 'DEBUG',
+#             'propagate': False
+#         },
+#         'weixin.views': {
+#             'handlers': ['console', 'default', 'warning', 'error'],
+#             'level': 'DEBUG',
+#             'propagate': True
+#         },
+#     }
+# }
