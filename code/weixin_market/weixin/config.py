@@ -3,7 +3,7 @@ from string import Template
 
 APPID = 'wxade43df560e74b6c'
 
-APPSECRET = '4e62b8f7d726f5340c9d8137a20d243d'
+APPSECRET = '81835b436b6be6a0512e237a3da12cf0'
 
 Mch_id = ""
 Mch_key = ""

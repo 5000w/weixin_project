@@ -27,7 +27,7 @@ def user_login(request):
             login_add_coupon(result["openid"])  # 优惠卷初始化
     except KeyError:
         logger.error(f'error code cant get openid')
-        return JsonResponse({"succ": False, "msg": "get openid fault", "data": {}})
+        return JsonResponse({"succ": False, "msg": "get openid fault", "data": result})
     header_info = generate_header_value(result["openid"])
     write_login_header(result["openid"], header_info)  # 写入redis登陆header
 

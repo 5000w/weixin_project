@@ -75,3 +75,128 @@ json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 [27/Sep/2018 21:53:51] "GET /wx/login HTTP/1.0" 500 79527
 Not Found: /favicon.ico
 [27/Sep/2018 21:53:51] "GET /favicon.ico HTTP/1.0" 404 2082
+Not Found: /
+[27/Sep/2018 22:15:34] "GET / HTTP/1.0" 404 2031
+Not Found: /favicon.ico
+[27/Sep/2018 22:15:35] "GET /favicon.ico HTTP/1.0" 404 2082
+Not Found: /
+[27/Sep/2018 22:39:24] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[27/Sep/2018 22:39:27] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[27/Sep/2018 22:39:29] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[27/Sep/2018 22:39:30] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[27/Sep/2018 22:39:32] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[27/Sep/2018 22:39:37] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[27/Sep/2018 22:39:38] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[27/Sep/2018 22:39:40] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[27/Sep/2018 22:39:41] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[27/Sep/2018 22:39:42] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[27/Sep/2018 22:39:44] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[27/Sep/2018 23:06:02] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[27/Sep/2018 23:06:27] "GET / HTTP/1.0" 404 2031
+error code cant get openid
+[27/Sep/2018 23:29:07] "POST /wx/login HTTP/1.0" 200 54
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 27, 2018 - 21:52:48
+Django version 2.1, using settings 'weixin_market.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+error code cant get openid
+[27/Sep/2018 23:58:43] "POST /wx/login HTTP/1.0" 200 54
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 27, 2018 - 23:56:37
+Django version 2.1, using settings 'weixin_market.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+{'js_code': '033k2fYh2xnTSH0U3xZh29eiYh2k2fYj'}
+https://api.weixin.qq.com/sns/jscode2session?appid=wxade43df560e74b6c&secret=4e62b8f7d726f5340c9d8137a20d243d&js_code=033k2fYh2xnTSH0U3xZh29eiYh2k2fYj&grant_type=authorization_code
+{'errcode': 40125, 'errmsg': 'invalid appsecret, view more at http://t.cn/RAEkdVq, hints: [ req_id: yPnL.A0923hb36 ]'}
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 28, 2018 - 00:00:21
+Django version 2.1, using settings 'weixin_market.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 28, 2018 - 00:11:03
+Django version 2.1, using settings 'weixin_market.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+error code cant get openid
+[28/Sep/2018 00:29:24] "POST /wx/login HTTP/1.0" 200 170
+Not Found: /robots.txt
+[28/Sep/2018 02:03:09] "GET /robots.txt HTTP/1.0" 404 2079
+Not Found: /
+[28/Sep/2018 03:21:50] "GET / HTTP/1.0" 404 2031
+Not Found: /rest/v1/AccountService/Accounts
+[28/Sep/2018 07:34:44] "GET /rest/v1/AccountService/Accounts HTTP/1.0" 404 2142
+Not Found: /
+[28/Sep/2018 07:45:43] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[28/Sep/2018 07:52:09] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[28/Sep/2018 07:52:10] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[28/Sep/2018 07:52:12] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[28/Sep/2018 07:52:13] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[28/Sep/2018 07:52:15] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[28/Sep/2018 07:52:20] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[28/Sep/2018 07:52:20] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[28/Sep/2018 07:52:21] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[28/Sep/2018 07:52:26] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[28/Sep/2018 07:52:27] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[28/Sep/2018 07:52:28] "GET / HTTP/1.0" 404 2031
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 28, 2018 - 00:11:20
+Django version 2.1, using settings 'weixin_market.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[28/Sep/2018 12:28:53] "POST /wx/login HTTP/1.0" 200 97
+已有用户
+[28/Sep/2018 12:41:00] "POST /wx/login HTTP/1.0" 200 97
+已有用户
+[28/Sep/2018 12:42:17] "POST /wx/login HTTP/1.0" 200 97
+已有用户
+[28/Sep/2018 12:42:40] "POST /wx/login HTTP/1.0" 200 97
+已有用户
+[28/Sep/2018 12:57:25] "POST /wx/login HTTP/1.0" 200 97
+Not Found: /robots.txt
+[28/Sep/2018 16:11:18] "GET /robots.txt HTTP/1.0" 404 2079
+Not Found: /
+[28/Sep/2018 16:11:20] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[28/Sep/2018 16:11:21] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[28/Sep/2018 17:58:32] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[28/Sep/2018 18:20:27] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[28/Sep/2018 19:32:45] "GET / HTTP/1.0" 404 2031
