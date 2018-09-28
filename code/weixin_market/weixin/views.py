@@ -7,7 +7,9 @@ from .login_interface.login_operation import write_login_header, generate_header
 import requests
 from weixin_market.settings import *
 from scripts.coupon import *
+from scripts.goods import *
 from . import pay
+from scripts.zhihuishu import *
 from scripts import *
 
 # Create your views here.
@@ -120,9 +122,30 @@ def get_coupon(request):
 
 @check_header
 def set_coupon_sta(request):
-    id = get_id_by_openid()
+    id = get_id_by_openid(request)
     get_data = json.loads(request.body)
     update_coupon(id,get_data['price'],get_data['state'])
     re_json = {"succ": True, "msg": "操作成功", "data": {}}
     return JsonResponse(re_json)
 
+@check_header
+def get_all_goods(request):
+
+    re_json = {"succ": True, "msg": "操作成功", "data": {'list' : get_all_goods_()}}
+    return JsonResponse(re_json)
+
+@check_header
+def get_class(request):
+    get_data = json.loads(request.body)
+    type = get_data['type']
+    phone_number = get_data['phone_number']
+    pwd = get_data['pwd']
+
+    if type == 1:
+        get_data_by_1 = get_data_by_zhihuishu(phone_number,pwd)
+        if get_data_by_1['succ'] == '1':
+            re_json = {"succ": True, "msg": "操作成功", "data": {'list': get_data_by_1['data']}}
+        else:
+            re_json = {"succ": False, "msg": get_data_by_1['mess'], "data": {'list': get_data_by_1['data']}}
+
+    return JsonResponse(re_json)

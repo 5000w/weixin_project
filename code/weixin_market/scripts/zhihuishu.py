@@ -38,7 +38,7 @@ def get_return_dict(succ,mess,data):
     dict['data'] = data
     return dict
 
-def get_data(username,password):
+def get_data_by_zhihuishu(username,password):
 
     session = requests.session()
     try:
@@ -96,4 +96,4 @@ def get_data(username,password):
     return get_return_dict('1','查询成功',list_data)
 
 
-#print(get_data('17391314633','ll19971017'))
+print(get_data_by_zhihuishu('17391314633','ll19971017'))

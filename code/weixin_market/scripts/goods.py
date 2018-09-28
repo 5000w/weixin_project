@@ -11,7 +11,7 @@ def add_goods_car(id,goods_id):
     user.car_info_set.create(goods=goods)
 
 #查看所有商品
-def get_all_goods():
+def get_all_goods_():
     return [{'name' : x.goods_name,'count' : x.count , 'url' : x.image_url }  for x in Goods.objects.filter()]
 
 
@@ -31,5 +31,5 @@ def del_car(id,goods_id_list):
 def run():
     #add_goods_car(3,2)
     #print(get_goods(3))
-    pass
+    print(get_all_goods_())
 
