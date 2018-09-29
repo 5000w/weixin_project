@@ -3,7 +3,6 @@ import time
 from django.http import JsonResponse
 from string import Template
 from weixin.models import Weixin_user
-
 import json
 _OPENID_KEY = f'user_$openid'
 
@@ -16,24 +15,23 @@ LIVE_TIME = 5 * 60
 def check_header(func):
     def _func(request):
         header = request.META
-        openid = header.get("openid")  #获取前端的openid
-        time = header.get("time")
+        openid = header["HTTP_OPENID"]  #获取前端的openid
+        time = header["HTTP_TIME"]
         redis_header = get_header_from_redis(openid)
         try:
-            if redis_header["openid"] != openid or redis_header["time"] != time:
+            if redis_header["openid"] != openid or str(redis_header["time"]) != time:
                 rsp = {"succ": False, "data": {}, "msg": "header 验证失败"}
                 return JsonResponse(rsp)
         except KeyError:
             rsp = {"succ": False, "data": {}, "msg": "header 验证失败"}
             return JsonResponse(rsp)
-        func(request)
-
+        return func(request)
     return _func
 
 
 def get_id_by_openid(request):
     header = request.META
-    openid = header.get("openid")
+    openid = header["HTTP_OPENID"]
     user = Weixin_user.objects.get(openid=openid)
     return user.id
 
