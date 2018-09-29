@@ -407,3 +407,33 @@ Django version 2.1, using settings 'weixin_market.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 [29/Sep/2018 11:32:25] "GET /wx/get_coupon HTTP/1.0" 200 69
+[29/Sep/2018 12:37:00] "GET /wx/get_coupon HTTP/1.0" 200 69
+已有用户
+[29/Sep/2018 12:39:16] "POST /wx/login HTTP/1.0" 200 97
+Internal Server Error: /wx/get_coupon
+Traceback (most recent call last):
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 137, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view weixin.login_interface.login_operation._func didn't return an HttpResponse object. It returned None instead.
+[29/Sep/2018 12:39:18] "GET /wx/get_coupon HTTP/1.0" 500 55024
+Performing system checks...
+
+{'succ': '1', 'mess': '查询成功', 'data': [{'courseName': '现代市场营销素质与能力提升', 'planProgress': '7.8%'}]}
+System check identified no issues (0 silenced).
+September 29, 2018 - 12:20:05
+Django version 2.1, using settings 'weixin_market.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+已有用户
+[29/Sep/2018 12:45:14] "POST /wx/login HTTP/1.0" 200 97
+[29/Sep/2018 12:45:15] "GET /wx/get_coupon HTTP/1.0" 200 176
+Performing system checks...
+
+{'succ': '1', 'mess': '查询成功', 'data': [{'courseName': '现代市场营销素质与能力提升', 'planProgress': '7.8%'}]}
+System check identified no issues (0 silenced).
+September 29, 2018 - 12:43:46
+Django version 2.1, using settings 'weixin_market.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.

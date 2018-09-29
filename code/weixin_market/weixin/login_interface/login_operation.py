@@ -25,8 +25,7 @@ def check_header(func):
         except KeyError:
             rsp = {"succ": False, "data": {}, "msg": "header 验证失败"}
             return JsonResponse(rsp)
-        func(request)
-
+        return func(request)
     return _func
 
 
