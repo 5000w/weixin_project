@@ -5,8 +5,8 @@ APPID = 'wxade43df560e74b6c'
 
 APPSECRET = '81835b436b6be6a0512e237a3da12cf0'
 
-Mch_id = ""
-Mch_key = ""
+Mch_id = "1513297191"
+Mch_key = "1513297191@1513297191"
 
 _CODE2SESSION = f'https://api.weixin.qq.com/sns/jscode2session?appid={APPID}&secret={APPSECRET}&js_code=$CODE&grant_type=authorization_code'
 
