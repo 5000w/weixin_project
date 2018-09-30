@@ -26,14 +26,14 @@ output: {
 input: {
 	
 }
-output: {"succ": True, "msg": "", "data": {'list' : list}}
+output: {"succ": True, "msg": "", "data": {'list' : list}} ###0、1、2   1-可以使用 0-不能使用 2-已经使用 
 
 
 设置优惠卷状态
 3.url: https://www.saber-toothed.xyz/wx/set_coupon_sta
 input:{
-	'price' : 'login'  ##login 、share_once 、share_twice
-	'state' : 1  ##1 、0  1生效0不生效
+	'price' : 'login'   ##login 、share_once 、share_twice
+	'state' : 1  ##1 、0  1-可以使用 0-不能使用 2-已经使用 
 }
 
 output: {"succ": True, "msg": "操作成功", "data": {}}
@@ -44,4 +44,19 @@ output: {"succ": True, "msg": "操作成功", "data": {}}
 input:{
 
 }
-output: {"succ": True, "msg": "", "data": {'list' : [{'name': '刷课', 'count': 100, 'url': ''，....}]}}
+#
+output: {"succ": True, "msg": "", "data": {'list' : [{'id' : 1, 'name': '刷课', 'count': 100, 'url': ''，price : 10 },....]}}
+
+分享时，解锁优惠卷
+5、url: https://www.saber-toothed.xyz/wx/share_for_coupon
+input：{
+}
+output: {"succ": True, "msg": "", "data": {}}
+
+获取课程信息
+6、url: https://www.saber-toothed.xyz/wx/get_class
+input：{
+	'type': 1           #int    1为智慧树 2为超星 
+	'phone_number' : '' #电话号码
+	'pwd' : 'pwd'       #密码
+}
