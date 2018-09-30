@@ -12,7 +12,7 @@ def add_goods_car(id,goods_id):
 
 #查看所有商品
 def get_all_goods_():
-    return [{'name' : x.goods_name,'count' : x.count , 'url' : x.image_url }  for x in Goods.objects.filter()]
+    return [{'id' :  x.id,'name' : x.goods_name,'count' : x.count , 'url' : x.image_url ,'price' : 10}  for x in Goods.objects.filter()]
 
 
 #查看某个openid购物车的商品

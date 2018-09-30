@@ -149,3 +149,15 @@ def get_class(request):
             re_json = {"succ": False, "msg": get_data_by_1['mess'], "data": {'list': get_data_by_1['data']}}
 
     return JsonResponse(re_json)
+
+@check_header
+def share_for_coupon(request):
+
+    id = get_id_by_openid(request)
+
+    if share_for_coupon_(id) :
+        re_json = {"succ": True, "msg": "操作成功", "data": {}}
+    else:
+        re_json = {"succ": False, "msg": "所有优惠卷都已生效", "data": {}}
+
+    return JsonResponse(re_json)

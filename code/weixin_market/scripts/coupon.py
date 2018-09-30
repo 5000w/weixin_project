@@ -33,10 +33,44 @@ def get_coupon_db(id):
 def update_coupon_stateTo1():
    Coupon.objects.filter().update(state=1)
 
+#邀请的优惠卷逻辑
+def share_for_coupon_(id):
+    user = Weixin_user.objects.get(id=id)
+    share_once_obj = user.coupon_set.get(price='share_once')
 
+    #判断第二张优惠卷是否生效
+    if share_once_obj.state == 0:
+
+        #设置第一张生效
+        share_once_obj.state = 1
+
+        share_once_obj.save()
+
+        return True
+
+    #如果第一张已经生效或者，已经使用再分享的话，设置第二张优惠卷状态
+    else:
+
+        #判断第二张优惠卷的状态
+        share_twice_obj = user.coupon_set.get(price='share_twice')
+
+        #如果第二张优惠卷为0
+        if share_twice_obj.state == 0:
+
+            # 设置第2张生效
+            share_twice_obj.state = 1
+
+            share_twice_obj.save()
+
+            return True
+
+        #如果第二张的状态为1或者2（已经使用和可以使用）
+        else:
+            return False
 
 def run():
     pass
     #login_add('test1'+str(1234))
     #update_coupon(3,'login',0)
     #update_coupon_stateTo1()
+    print(share_for_coupon_(4))
