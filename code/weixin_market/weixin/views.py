@@ -24,7 +24,6 @@ def user_login(request):
         if Weixin_user.objects.filter(openid=result["openid"]):
             logger.info("已有用户")
         else:
-
             Weixin_user(openid=result["openid"]).save()
             login_add_coupon(result["openid"])  # 优惠卷初始化
     except KeyError:
@@ -42,47 +41,23 @@ def user_login(request):
 def payOrder(request):
     import time
     if request.method == 'POST':
-        # 获取价格
-        price = json.loads(request.body)["price"]
-
-        # 获取客户端ip
-        client_ip = request.META["HTTP_X_REAL_IP"]
-        # 获取小程序openid
-        #openid = Weixin_user.objects.get(openid=user_id).openid
+        price = json.loads(request.body)["price"] # 获取价格
+        client_ip = request.META["HTTP_X_REAL_IP"] # 获取客户端ip
         #openid = "onAnm5WbhguBA6qhbbg1f7N_zYxA"
-        openid = request.META["HTTP_OPENID"]
-        # 请求微信的url
-        url = Order_url
-
-        # 拿到封装好的xml数据
-        body_data = pay.get_bodyData(openid, client_ip, price)
-        print(body_data)
-
-        # 获取时间戳
-        timeStamp = str(int(time.time()))
-
-        # 请求微信接口下单
+        openid = request.META["HTTP_OPENID"] # 获取小程序openid
+        url = Order_url # 请求微信的url
+        body_data = pay.get_bodyData(openid, client_ip, price) # 拿到封装好的xml数据
+        timeStamp = str(int(time.time())) # 获取时间戳
         respone = requests.post(url, body_data.encode(
-            "utf-8"), headers={'Content-Type': 'application/xml'})
-
-        # 回复数据为xml,将其转为字典
-        content = pay.xml_to_dict(respone.content)
-        print(content)
+            "utf-8"), headers={'Content-Type': 'application/xml'}) # 请求微信接口下单
+        content = pay.xml_to_dict(respone.content) # 回复数据为xml,将其转为字典
         if content["return_code"] == 'SUCCESS':
-            # 获取预支付交易会话标识
-            prepay_id = "prepay_id="+content.get("prepay_id")
-            # 获取随机字符串
-            nonceStr = content.get("nonce_str")
-
-            # 获取paySign签名，这个需要我们根据拿到的prepay_id和nonceStr进行计算签名
-            paySign = pay.get_paysign(prepay_id, timeStamp, nonceStr)
-
-            # 封装返回给前端的数据
+            prepay_id = "prepay_id="+content.get("prepay_id") # 获取预支付交易会话标识
+            nonceStr = content.get("nonce_str") # 获取随机字符串
+            paySign = pay.get_paysign(prepay_id, timeStamp, nonceStr) # 获取paySign签名，这个需要我们根据拿到的prepay_id和nonceStr进行计算签名
             data = {"prepay_id": prepay_id, "nonceStr": nonceStr,
-                    "paySign": paySign, "timeStamp": timeStamp}
-            print(data)
+                    "paySign": paySign, "timeStamp": timeStamp} # 封装返回给前端的数据
             return JsonResponse({"succ":True,"data":data,"msg":"succ"})
-
         else:
             return JsonResponse({"请求支付失败": 434})
     else:
@@ -93,12 +68,11 @@ def payOrder(request):
 def payback(request):
     msg = request.body.decode('utf-8')
     xmlmsg = pay.xml_to_dict(msg)
- 
     return_code = xmlmsg['return_code']
- 
     if return_code == 'FAIL':
-        # 官方发出错误
+        # 官方发出错误 + 支付失败
         print(xmlmsg)
+        #错误逻辑处理
         return HttpResponse("""<xml><return_code><![CDATA[FAIL]]></return_code>
                             <return_msg><![CDATA[Signature_Error]]></return_msg></xml>""",
                             content_type='text/xml', status=200)
@@ -107,7 +81,6 @@ def payback(request):
         out_trade_no = xmlmsg['out_trade_no']
         print(xmlmsg)
         # 根据需要处理业务逻辑
- 
         return HttpResponse("""<xml><return_code><![CDATA[SUCCESS]]></return_code>
                             <return_msg><![CDATA[OK]]></return_msg></xml>""",
                             content_type='text/xml', status=200)
