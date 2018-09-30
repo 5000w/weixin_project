@@ -22,8 +22,10 @@ def paysign(appid, body, mch_id, nonce_str, notify_url, openid, out_trade_no, sp
 
     # 处理函数，对参数按照key=value的格式，并按照参数名ASCII字典序排序
     stringA = '&'.join(["{0}={1}".format(k, ret.get(k))for k in sorted(ret)])
+    print(stringA)
     stringSignTemp = '{0}&key={1}'.format(stringA, Mch_key)
-    sign = hashlib.md5(stringSignTemp.encode("utf-8")).hexdigest()
+    print(stringSignTemp)
+    sign = hashlib.md5(stringSignTemp.encode()).hexdigest()
     return sign.upper()
 
 
@@ -107,12 +109,13 @@ def get_paysign(prepay_id, timeStamp, nonceStr):
     pay_data = {
         'appId': APPID,
         'nonceStr': nonceStr,
-        'package': "prepay_id="+prepay_id,
+        'package': prepay_id,
         'signType': 'MD5',
         'timeStamp': timeStamp
     }
     stringA = '&'.join(["{0}={1}".format(k, pay_data.get(k))
                         for k in sorted(pay_data)])
     stringSignTemp = '{0}&key={1}'.format(stringA, Mch_key)
+    print(stringSignTemp)
     sign = hashlib.md5(stringSignTemp.encode("utf-8")).hexdigest()
     return sign.upper()

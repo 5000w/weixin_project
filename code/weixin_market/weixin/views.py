@@ -22,7 +22,7 @@ def user_login(request):
     result = json.loads(requests.get(codeurl).text)
     try:
         if Weixin_user.objects.filter(openid=result["openid"]):
-            logger.error("已有用户")
+            logger.info("已有用户")
         else:
 
             Weixin_user(openid=result["openid"]).save()
@@ -39,23 +39,24 @@ def user_login(request):
 # 统一下单支付接口
 
 
-def payOrder(request, user_id):
+def payOrder(request):
     import time
     if request.method == 'POST':
         # 获取价格
-        price = request.POST.get("price")
+        price = json.loads(request.body)["price"]
 
         # 获取客户端ip
-        client_ip, port = request.get_host().split(":")
-
+        client_ip = request.META["HTTP_X_REAL_IP"]
         # 获取小程序openid
-        openid = Weixin_user.objects.get(openid=user_id).openid
-
+        #openid = Weixin_user.objects.get(openid=user_id).openid
+        #openid = "onAnm5WbhguBA6qhbbg1f7N_zYxA"
+        openid = request.META["HTTP_OPENID"]
         # 请求微信的url
         url = Order_url
 
         # 拿到封装好的xml数据
         body_data = pay.get_bodyData(openid, client_ip, price)
+        print(body_data)
 
         # 获取时间戳
         timeStamp = str(int(time.time()))
@@ -66,10 +67,10 @@ def payOrder(request, user_id):
 
         # 回复数据为xml,将其转为字典
         content = pay.xml_to_dict(respone.content)
-
+        print(content)
         if content["return_code"] == 'SUCCESS':
             # 获取预支付交易会话标识
-            prepay_id = content.get("prepay_id")
+            prepay_id = "prepay_id="+content.get("prepay_id")
             # 获取随机字符串
             nonceStr = content.get("nonce_str")
 
@@ -79,8 +80,8 @@ def payOrder(request, user_id):
             # 封装返回给前端的数据
             data = {"prepay_id": prepay_id, "nonceStr": nonceStr,
                     "paySign": paySign, "timeStamp": timeStamp}
-
-            return JsonResponse(data)
+            print(data)
+            return JsonResponse({"succ":True,"data":data,"msg":"succ"})
 
         else:
             return JsonResponse({"请求支付失败": 434})
@@ -97,13 +98,14 @@ def payback(request):
  
     if return_code == 'FAIL':
         # 官方发出错误
+        print(xmlmsg)
         return HttpResponse("""<xml><return_code><![CDATA[FAIL]]></return_code>
                             <return_msg><![CDATA[Signature_Error]]></return_msg></xml>""",
                             content_type='text/xml', status=200)
     elif return_code == 'SUCCESS':
         # 拿到这次支付的订单号
-        out_trade_no = xmlmsg['xml']['out_trade_no']
- 
+        out_trade_no = xmlmsg['out_trade_no']
+        print(xmlmsg)
         # 根据需要处理业务逻辑
  
         return HttpResponse("""<xml><return_code><![CDATA[SUCCESS]]></return_code>
@@ -150,6 +152,7 @@ def get_class(request):
 
     return JsonResponse(re_json)
 
+
 @check_header
 def share_for_coupon(request):
 
@@ -161,3 +164,4 @@ def share_for_coupon(request):
         re_json = {"succ": False, "msg": "所有优惠卷都已生效", "data": {}}
 
     return JsonResponse(re_json)
+

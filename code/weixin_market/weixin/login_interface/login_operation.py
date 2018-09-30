@@ -8,7 +8,7 @@ _OPENID_KEY = f'user_$openid'
 
 TEMPLATE_OPENID_KEY = Template(_OPENID_KEY)
 
-LIVE_TIME = 5 * 60
+LIVE_TIME = 5 * 60 * 60 * 60 * 60
 
 
 
@@ -32,6 +32,7 @@ def check_header(func):
 def get_id_by_openid(request):
     header = request.META
     openid = header["HTTP_OPENID"]
+    #openid = "onAnm5UnBKJ9X-1738uWpA2cJPdI" #张雨生调试接口
     user = Weixin_user.objects.get(openid=openid)
     return user.id
 
