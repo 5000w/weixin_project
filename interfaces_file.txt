@@ -1,4 +1,4 @@
-# url
+﻿# url
 # input 
 # output
 # method 没有input就是get 有input就是post
@@ -19,3 +19,29 @@ output: {
 		"openid": "fdgdfssdf" #weixin user openid
 	}
 }
+
+
+查看优惠卷状态
+2.url: https://www.saber-toothed.xyz/wx/get_coupon
+input: {
+	
+}
+output: {"succ": True, "msg": "", "data": {'list' : list}}
+
+
+设置优惠卷状态
+3.url: https://www.saber-toothed.xyz/wx/set_coupon_sta
+input:{
+	'price' : 'login'  ##login 、share_once 、share_twice
+	'state' : 1  ##1 、0  1生效0不生效
+}
+
+output: {"succ": True, "msg": "操作成功", "data": {}}
+
+
+获取全部商品
+4、url: https://www.saber-toothed.xyz/wx/get_all_goods
+input:{
+
+}
+output: {"succ": True, "msg": "", "data": {'list' : [{'name': '刷课', 'count': 100, 'url': ''，....}]}}
