@@ -437,3 +437,263 @@ September 29, 2018 - 12:43:46
 Django version 2.1, using settings 'weixin_market.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
+Internal Server Error: /wx/login
+Traceback (most recent call last):
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin/views.py", line 20, in user_login
+    get_data = json.loads(request.body)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/json/__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[29/Sep/2018 14:22:54] "GET /wx/login HTTP/1.0" 500 79522
+Not Found: /favicon.ico
+[29/Sep/2018 14:22:55] "GET /favicon.ico HTTP/1.0" 404 2082
+Not Found: /
+[29/Sep/2018 18:05:38] "GET / HTTP/1.0" 404 2031
+[29/Sep/2018 18:24:03] "HEAD /static/admin/images/login_logo.png HTTP/1.0" 404 1706
+Not Found: /
+[29/Sep/2018 19:01:00] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[29/Sep/2018 20:13:58] "GET / HTTP/1.0" 404 2031
+Not Found: /robots.txt
+[29/Sep/2018 20:14:21] "GET /robots.txt HTTP/1.0" 404 2079
+Not Found: /sitemap.xml
+[29/Sep/2018 20:14:23] "GET /sitemap.xml HTTP/1.0" 404 2082
+Not Found: /.well-known/security.txt
+[29/Sep/2018 20:14:26] "GET /.well-known/security.txt HTTP/1.0" 404 2121
+Not Found: /favicon.ico
+[29/Sep/2018 20:14:41] "GET /favicon.ico HTTP/1.0" 404 2082
+Not Found: /
+[29/Sep/2018 20:49:24] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[29/Sep/2018 22:19:43] "GET / HTTP/1.0" 404 2031
+Not Found: /user/register
+[30/Sep/2018 00:45:14] "GET /user/register?element_parents=account/mail/%23value&ajax_form=1&_wrapper_format=drupal_aja HTTP/1.0" 404 2173
+[30/Sep/2018 01:15:29] "GET /wx/get_coupon HTTP/1.0" 200 69
+已有用户
+[30/Sep/2018 01:15:45] "POST /wx/login HTTP/1.0" 200 97
+[30/Sep/2018 01:15:45] "GET /wx/get_coupon HTTP/1.0" 200 176
+[30/Sep/2018 01:20:50] "GET /wx/get_coupon HTTP/1.0" 200 69
+已有用户
+[30/Sep/2018 01:21:17] "POST /wx/login HTTP/1.0" 200 97
+[30/Sep/2018 01:21:18] "GET /wx/get_coupon HTTP/1.0" 200 176
+[30/Sep/2018 01:21:28] "GET /wx/get_coupon HTTP/1.0" 200 176
+[30/Sep/2018 01:24:18] "GET /wx/get_coupon HTTP/1.0" 200 176
+[30/Sep/2018 01:26:47] "GET /wx/get_coupon HTTP/1.0" 200 69
+Performing system checks...
+
+{'succ': '1', 'mess': '查询成功', 'data': [{'courseName': '现代市场营销素质与能力提升', 'planProgress': '7.8%'}]}
+System check identified no issues (0 silenced).
+September 29, 2018 - 12:48:56
+Django version 2.1, using settings 'weixin_market.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[30/Sep/2018 01:29:23] "GET /wx/get_coupon HTTP/1.0" 200 176
+Performing system checks...
+
+{'succ': '1', 'mess': '查询成功', 'data': [{'courseName': '现代市场营销素质与能力提升', 'planProgress': '8.9%'}]}
+System check identified no issues (0 silenced).
+September 30, 2018 - 01:29:06
+Django version 2.1, using settings 'weixin_market.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[30/Sep/2018 01:30:34] "GET /wx/get_coupon HTTP/1.0" 200 69
+Not Found: /
+[30/Sep/2018 01:31:11] "GET / HTTP/1.0" 404 2031
+[30/Sep/2018 01:34:02] "GET /wx/get_coupon HTTP/1.0" 200 69
+Not Found: /wx/get_all_goods
+[30/Sep/2018 01:34:02] "GET /wx/get_all_goods HTTP/1.0" 404 2529
+[30/Sep/2018 01:34:16] "GET /wx/get_coupon HTTP/1.0" 200 69
+Not Found: /wx/get_all_goods
+[30/Sep/2018 01:34:16] "GET /wx/get_all_goods HTTP/1.0" 404 2529
+已有用户
+[30/Sep/2018 01:34:59] "POST /wx/login HTTP/1.0" 200 97
+Not Found: /wx/get_all_goods
+[30/Sep/2018 01:34:59] "GET /wx/get_all_goods HTTP/1.0" 404 2529
+[30/Sep/2018 01:34:59] "GET /wx/get_coupon HTTP/1.0" 200 176
+Performing system checks...
+
+{'succ': '1', 'mess': '查询成功', 'data': [{'courseName': '现代市场营销素质与能力提升', 'planProgress': '8.9%'}]}
+System check identified no issues (0 silenced).
+September 30, 2018 - 01:30:10
+Django version 2.1, using settings 'weixin_market.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+{'succ': '1', 'mess': '查询成功', 'data': [{'courseName': '现代市场营销素质与能力提升', 'planProgress': '8.9%'}]}
+System check identified no issues (0 silenced).
+September 30, 2018 - 01:36:58
+Django version 2.1, using settings 'weixin_market.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[30/Sep/2018 01:37:38] "GET /wx/get_coupon HTTP/1.0" 200 176
+[30/Sep/2018 01:37:38] "GET /wx/get_all_goods HTTP/1.0" 200 561
+Performing system checks...
+
+{'succ': '1', 'mess': '查询成功', 'data': [{'courseName': '现代市场营销素质与能力提升', 'planProgress': '8.9%'}]}
+System check identified no issues (0 silenced).
+September 30, 2018 - 01:37:32
+Django version 2.1, using settings 'weixin_market.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[30/Sep/2018 01:38:13] "GET /wx/get_all_goods HTTP/1.0" 200 561
+[30/Sep/2018 01:38:13] "GET /wx/get_coupon HTTP/1.0" 200 176
+[30/Sep/2018 01:38:56] "GET /wx/get_coupon HTTP/1.0" 200 176
+[30/Sep/2018 01:38:56] "GET /wx/get_all_goods HTTP/1.0" 200 561
+Performing system checks...
+
+{'succ': '1', 'mess': '查询成功', 'data': [{'courseName': '现代市场营销素质与能力提升', 'planProgress': '8.9%'}]}
+System check identified no issues (0 silenced).
+September 30, 2018 - 01:38:12
+Django version 2.1, using settings 'weixin_market.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[30/Sep/2018 01:40:39] "GET /wx/get_all_goods HTTP/1.0" 200 561
+[30/Sep/2018 01:40:39] "GET /wx/get_coupon HTTP/1.0" 200 176
+Performing system checks...
+
+{'succ': '1', 'mess': '查询成功', 'data': [{'courseName': '现代市场营销素质与能力提升', 'planProgress': '8.9%'}]}
+System check identified no issues (0 silenced).
+September 30, 2018 - 01:39:42
+Django version 2.1, using settings 'weixin_market.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[30/Sep/2018 01:43:09] "GET /wx/get_all_goods HTTP/1.0" 200 561
+[30/Sep/2018 01:43:09] "GET /wx/get_coupon HTTP/1.0" 200 176
+Not Found: /robots.txt
+[30/Sep/2018 01:44:29] "GET /robots.txt HTTP/1.0" 404 2079
+Not Found: /
+[30/Sep/2018 01:44:32] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[30/Sep/2018 01:44:33] "GET / HTTP/1.0" 404 2031
+[30/Sep/2018 01:45:51] "GET /wx/get_coupon HTTP/1.0" 200 176
+[30/Sep/2018 01:45:51] "GET /wx/get_all_goods HTTP/1.0" 200 561
+[30/Sep/2018 01:46:01] "GET /wx/get_coupon HTTP/1.0" 200 176
+[30/Sep/2018 01:46:01] "GET /wx/get_all_goods HTTP/1.0" 200 561
+[30/Sep/2018 01:46:39] "GET /wx/get_coupon HTTP/1.0" 200 176
+[30/Sep/2018 01:46:39] "GET /wx/get_all_goods HTTP/1.0" 200 561
+Performing system checks...
+
+{'succ': '1', 'mess': '查询成功', 'data': [{'courseName': '现代市场营销素质与能力提升', 'planProgress': '8.9%'}]}
+System check identified no issues (0 silenced).
+September 30, 2018 - 01:42:08
+Django version 2.1, using settings 'weixin_market.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+已有用户
+[30/Sep/2018 01:49:11] "POST /wx/login HTTP/1.0" 200 97
+[30/Sep/2018 01:49:12] "GET /wx/get_coupon HTTP/1.0" 200 176
+[30/Sep/2018 01:49:12] "GET /wx/get_all_goods HTTP/1.0" 200 561
+[30/Sep/2018 01:50:53] "POST /wx/login HTTP/1.0" 200 97
+已有用户
+[30/Sep/2018 01:50:53] "POST /wx/login HTTP/1.0" 200 97
+[30/Sep/2018 01:50:54] "GET /wx/get_coupon HTTP/1.0" 200 176
+[30/Sep/2018 01:50:54] "GET /wx/get_all_goods HTTP/1.0" 200 561
+[30/Sep/2018 01:51:32] "GET /wx/get_all_goods HTTP/1.0" 200 561
+[30/Sep/2018 01:51:32] "GET /wx/get_coupon HTTP/1.0" 200 176
+[30/Sep/2018 01:51:47] "POST /wx/login HTTP/1.0" 200 97
+[30/Sep/2018 01:51:48] "GET /wx/get_all_goods HTTP/1.0" 200 561
+[30/Sep/2018 01:51:48] "GET /wx/get_coupon HTTP/1.0" 200 176
+[30/Sep/2018 01:52:32] "GET /wx/get_coupon HTTP/1.0" 200 176
+[30/Sep/2018 01:52:32] "GET /wx/get_all_goods HTTP/1.0" 200 561
+[30/Sep/2018 01:53:19] "GET /wx/get_coupon HTTP/1.0" 200 176
+[30/Sep/2018 01:53:19] "GET /wx/get_all_goods HTTP/1.0" 200 561
+[30/Sep/2018 02:02:42] "GET /wx/get_coupon HTTP/1.0" 200 176
+[30/Sep/2018 02:02:42] "GET /wx/get_all_goods HTTP/1.0" 200 561
+[30/Sep/2018 02:02:55] "GET /wx/get_coupon HTTP/1.0" 200 176
+[30/Sep/2018 02:02:55] "GET /wx/get_all_goods HTTP/1.0" 200 561
+[30/Sep/2018 02:03:05] "GET /wx/get_coupon HTTP/1.0" 200 176
+[30/Sep/2018 02:03:05] "GET /wx/get_all_goods HTTP/1.0" 200 561
+[30/Sep/2018 02:05:01] "GET /wx/get_coupon HTTP/1.0" 200 176
+[30/Sep/2018 02:05:01] "GET /wx/get_all_goods HTTP/1.0" 200 561
+Not Found: /
+[30/Sep/2018 03:06:59] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[30/Sep/2018 04:49:06] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[30/Sep/2018 08:45:57] "GET / HTTP/1.0" 404 2031
+[30/Sep/2018 09:09:04] "GET /wx/get_all_goods HTTP/1.0" 200 561
+[30/Sep/2018 09:09:04] "GET /wx/get_coupon HTTP/1.0" 200 176
+Not Found: /
+[30/Sep/2018 09:37:52] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[30/Sep/2018 09:37:52] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[30/Sep/2018 09:37:52] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[30/Sep/2018 09:38:22] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[30/Sep/2018 09:38:30] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[30/Sep/2018 09:38:30] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[30/Sep/2018 09:50:48] "GET / HTTP/1.0" 404 2031
+已有用户
+[30/Sep/2018 10:26:16] "POST /wx/login HTTP/1.0" 200 97
+[30/Sep/2018 10:26:20] "GET /wx/get_coupon HTTP/1.0" 200 176
+[30/Sep/2018 10:26:20] "GET /wx/get_all_goods HTTP/1.0" 200 561
+[30/Sep/2018 10:33:51] "GET /wx/get_coupon HTTP/1.0" 200 176
+[30/Sep/2018 10:33:51] "GET /wx/get_all_goods HTTP/1.0" 200 561
+Not Found: /wx/payOrder
+[30/Sep/2018 10:33:55] "POST /wx/payOrder HTTP/1.0" 404 2700
+[30/Sep/2018 10:44:21] "GET /wx/get_coupon HTTP/1.0" 200 176
+[30/Sep/2018 10:44:21] "GET /wx/get_all_goods HTTP/1.0" 200 561
+Not Found: /wx/payOrder
+[30/Sep/2018 10:44:26] "POST /wx/payOrder HTTP/1.0" 404 2700
+Not Found: /wx/payOrder
+[30/Sep/2018 10:51:29] "POST /wx/payOrder HTTP/1.0" 404 2700
+Performing system checks...
+
+{'succ': '1', 'mess': '查询成功', 'data': [{'courseName': '现代市场营销素质与能力提升', 'planProgress': '8.9%'}]}
+System check identified no issues (0 silenced).
+September 30, 2018 - 01:46:54
+Django version 2.1, using settings 'weixin_market.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+{'succ': '1', 'mess': '查询成功', 'data': [{'courseName': '现代市场营销素质与能力提升', 'planProgress': '8.9%'}]}
+System check identified no issues (0 silenced).
+September 30, 2018 - 11:00:03
+Django version 2.1, using settings 'weixin_market.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Internal Server Error: /wx/payOrder
+Traceback (most recent call last):
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: payOrder() missing 1 required positional argument: 'user_id'
+[30/Sep/2018 11:01:02] "POST /wx/payOrder HTTP/1.0" 500 59773
+Performing system checks...
+
+{'succ': '1', 'mess': '查询成功', 'data': [{'courseName': '现代市场营销素质与能力提升', 'planProgress': '8.9%'}]}
+System check identified no issues (0 silenced).
+September 30, 2018 - 11:00:55
+Django version 2.1, using settings 'weixin_market.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[30/Sep/2018 11:02:18] "POST /wx/payOrder HTTP/1.0" 200 45
+Performing system checks...
+
+{'succ': '1', 'mess': '查询成功', 'data': [{'courseName': '现代市场营销素质与能力提升', 'planProgress': '8.9%'}]}
+System check identified no issues (0 silenced).
+September 30, 2018 - 11:02:16
+Django version 2.1, using settings 'weixin_market.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[30/Sep/2018 11:02:53] "POST /wx/payOrder HTTP/1.0" 200 45
+[30/Sep/2018 11:02:57] "POST /wx/payOrder HTTP/1.0" 200 45
