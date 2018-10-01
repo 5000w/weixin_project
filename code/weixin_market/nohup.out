@@ -697,3 +697,154 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 [30/Sep/2018 11:02:53] "POST /wx/payOrder HTTP/1.0" 200 45
 [30/Sep/2018 11:02:57] "POST /wx/payOrder HTTP/1.0" 200 45
+Internal Server Error: /wx/get_all_goods
+Traceback (most recent call last):
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin/login_interface/login_operation.py", line 18, in _func
+    openid = header["HTTP_OPENID"]  #获取前端的openid
+KeyError: 'HTTP_OPENID'
+[30/Sep/2018 15:59:58] "GET /wx/get_all_goods HTTP/1.0" 500 68642
+[30/Sep/2018 16:01:07] "GET /wx/get_coupon HTTP/1.0" 200 69
+[30/Sep/2018 16:01:07] "GET /wx/get_all_goods HTTP/1.0" 200 69
+[30/Sep/2018 16:01:28] "POST /wx/payOrder HTTP/1.0" 200 208
+[30/Sep/2018 16:04:17] "POST /wx/payOrder HTTP/1.0" 200 208
+[30/Sep/2018 16:04:52] "POST /wx/payOrder HTTP/1.0" 200 208
+Internal Server Error: /wx/get_all_goods
+Traceback (most recent call last):
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin/login_interface/login_operation.py", line 18, in _func
+    openid = header["HTTP_OPENID"]  #获取前端的openid
+KeyError: 'HTTP_OPENID'
+[30/Sep/2018 16:15:40] "GET /wx/get_all_goods HTTP/1.0" 500 68042
+Internal Server Error: /wx/get_all_goods
+Traceback (most recent call last):
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin/login_interface/login_operation.py", line 19, in _func
+    time = header["HTTP_TIME"]
+KeyError: 'HTTP_TIME'
+[30/Sep/2018 16:16:32] "GET /wx/get_all_goods HTTP/1.0" 500 68400
+[30/Sep/2018 16:17:45] "GET /wx/get_all_goods HTTP/1.0" 200 737
+[30/Sep/2018 16:17:45] "GET /wx/get_coupon HTTP/1.0" 200 176
+Internal Server Error: /wx/get_all_goods
+Traceback (most recent call last):
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin/login_interface/login_operation.py", line 19, in _func
+    time = header["HTTP_TIME"]
+KeyError: 'HTTP_TIME'
+[30/Sep/2018 16:21:09] "GET /wx/get_all_goods HTTP/1.0" 500 68398
+[30/Sep/2018 16:23:54] "GET /wx/get_all_goods HTTP/1.0" 200 69
+[30/Sep/2018 16:24:15] "GET /wx/get_all_goods HTTP/1.0" 200 69
+[30/Sep/2018 16:25:34] "GET /wx/get_all_goods HTTP/1.0" 200 737
+[30/Sep/2018 16:30:15] "GET /wx/get_all_goods HTTP/1.0" 200 737
+[30/Sep/2018 16:30:15] "GET /wx/get_coupon HTTP/1.0" 200 176
+[30/Sep/2018 16:30:40] "GET /wx/get_all_goods HTTP/1.0" 200 737
+[30/Sep/2018 16:30:40] "GET /wx/get_coupon HTTP/1.0" 200 176
+[30/Sep/2018 16:34:25] "GET /wx/get_class HTTP/1.0" 200 96
+Not Found: /
+[30/Sep/2018 17:22:09] "GET / HTTP/1.0" 404 2031
+[30/Sep/2018 18:53:52] "GET /wx/get_coupon HTTP/1.0" 200 69
+[30/Sep/2018 18:53:52] "GET /wx/get_all_goods HTTP/1.0" 200 69
+[30/Sep/2018 19:41:13] "GET /wx/get_all_goods HTTP/1.0" 200 737
+[30/Sep/2018 19:41:13] "GET /wx/get_coupon HTTP/1.0" 200 176
+[30/Sep/2018 19:41:24] "POST /wx/payOrder HTTP/1.0" 200 208
+Not Found: /otsmobile/app/mgs/mgw.htm
+[30/Sep/2018 20:24:27] "GET /otsmobile/app/mgs/mgw.htm?operationType=com.cars.otsmobile.queryLeftTicketA&requestData=%5B%7B%22train_date%22%3A%2220181010%22%2C%22purpose_codes%22%3A%2200%22%2C%22from_station%22%3A%22PIJ%22%2C%22to_station%22%3A%22POJ%22%2C%22station_train_code%22%3A%22%22%2C%22start_time_begin%22%3A%220000%22%2C%22start_time_end%22%3A%222400%22%2C%22train_headers%22%3A%22QB%23%22%2C%22train_flag%22%3A%22%22%2C%22seat_type%22%3A%22%22%2C%22seatBack_Type%22%3A%22%22%2C%22ticket_num%22%3A%22%22%2C%22dfpStr%22%3A%22%22%2C%22baseDTO%22%3A%7B%22check_code%22%3A%22a8b5fdee33a609185ab6fafea27feefc%22%2C%22device_no%22%3A%22a863773724baecb4%22%2C%22mobile_no%22%3A%22%22%2C%22os_type%22%3A%22a%22%2C%22time_str%22%3A%2220180930202427%22%2C%22user_name%22%3A%22%22%2C%22version_no%22%3A%224.0.0.07121250%22%7D%7D%5D&ts=1538310267111&sign= HTTP/1.0" 404 2935
+Not Found: /
+[30/Sep/2018 21:37:42] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[30/Sep/2018 23:10:15] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[01/Oct/2018 00:00:44] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[01/Oct/2018 01:58:09] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[01/Oct/2018 01:58:15] "OPTIONS / HTTP/1.0" 404 2035
+Not Found: /nice ports,/Trinity.txt.bak
+[01/Oct/2018 01:58:18] "GET /nice%20ports,/Trinity.txt.bak HTTP/1.0" 404 2132
+Not Found: /robots.txt
+[01/Oct/2018 02:53:56] "GET /robots.txt HTTP/1.0" 404 2079
+Not Found: /
+[01/Oct/2018 02:53:58] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[01/Oct/2018 02:53:59] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[01/Oct/2018 03:44:47] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[01/Oct/2018 05:31:18] "GET / HTTP/1.0" 404 2031
+[01/Oct/2018 12:36:58] "GET /wx/get_all_goods HTTP/1.0" 200 69
+[01/Oct/2018 12:36:58] "GET /wx/get_coupon HTTP/1.0" 200 69
+[01/Oct/2018 12:37:03] "POST /wx/payOrder HTTP/1.0" 200 208
+[01/Oct/2018 12:49:47] "POST /wx/login HTTP/1.0" 200 97
+[01/Oct/2018 12:49:48] "GET /wx/get_all_goods HTTP/1.0" 200 737
+[01/Oct/2018 12:49:48] "GET /wx/get_coupon HTTP/1.0" 200 176
+[01/Oct/2018 12:50:41] "POST /wx/login HTTP/1.0" 200 97
+[01/Oct/2018 12:50:56] "GET /wx/get_coupon HTTP/1.0" 200 176
+[01/Oct/2018 12:50:56] "GET /wx/get_all_goods HTTP/1.0" 200 737
+[01/Oct/2018 13:05:14] "GET /wx/get_coupon HTTP/1.0" 200 69
+[01/Oct/2018 13:05:14] "GET /wx/get_all_goods HTTP/1.0" 200 69
+[01/Oct/2018 13:05:20] "POST /wx/payOrder HTTP/1.0" 200 208
+[01/Oct/2018 13:27:51] "GET /wx/get_coupon HTTP/1.0" 200 69
+[01/Oct/2018 13:27:51] "GET /wx/get_all_goods HTTP/1.0" 200 69
+[01/Oct/2018 13:29:37] "POST /wx/payOrder HTTP/1.0" 200 208
+Not Found: /
+[01/Oct/2018 13:43:47] "GET / HTTP/1.0" 404 2031
+[01/Oct/2018 14:28:11] "GET /wx/get_all_goods HTTP/1.0" 200 737
+[01/Oct/2018 14:29:27] "GET /wx/get_coupon HTTP/1.0" 200 176
+[01/Oct/2018 14:29:27] "GET /wx/get_all_goods HTTP/1.0" 200 737
+[01/Oct/2018 14:29:49] "GET /wx/get_coupon HTTP/1.0" 200 176
+[01/Oct/2018 14:29:49] "GET /wx/get_all_goods HTTP/1.0" 200 737
+[01/Oct/2018 14:30:32] "GET /wx/get_coupon HTTP/1.0" 200 176
+[01/Oct/2018 14:30:32] "GET /wx/get_all_goods HTTP/1.0" 200 737
+[01/Oct/2018 14:31:06] "GET /wx/get_all_goods HTTP/1.0" 200 69
+[01/Oct/2018 14:31:06] "GET /wx/get_coupon HTTP/1.0" 200 69
+[01/Oct/2018 14:31:29] "GET /wx/get_all_goods HTTP/1.0" 200 737
+[01/Oct/2018 14:31:29] "GET /wx/get_coupon HTTP/1.0" 200 176
+[01/Oct/2018 14:32:47] "GET /wx/get_all_goods HTTP/1.0" 200 737
+[01/Oct/2018 14:32:47] "GET /wx/get_coupon HTTP/1.0" 200 176
+[01/Oct/2018 14:33:45] "GET /wx/get_coupon HTTP/1.0" 200 176
+[01/Oct/2018 14:33:45] "GET /wx/get_all_goods HTTP/1.0" 200 737
+[01/Oct/2018 14:34:33] "GET /wx/get_all_goods HTTP/1.0" 200 737
+[01/Oct/2018 14:34:33] "GET /wx/get_coupon HTTP/1.0" 200 176
+[01/Oct/2018 14:34:46] "POST /wx/payOrder HTTP/1.0" 200 208
+[01/Oct/2018 14:36:26] "GET /wx/get_coupon HTTP/1.0" 200 176
+[01/Oct/2018 14:36:26] "GET /wx/get_all_goods HTTP/1.0" 200 737
+[01/Oct/2018 14:38:23] "GET /wx/get_all_goods HTTP/1.0" 200 69
+[01/Oct/2018 14:38:23] "GET /wx/get_coupon HTTP/1.0" 200 69
+[01/Oct/2018 14:39:03] "GET /wx/get_coupon HTTP/1.0" 200 69
+[01/Oct/2018 14:39:04] "GET /wx/get_all_goods HTTP/1.0" 200 69
+[01/Oct/2018 14:42:57] "GET /wx/get_coupon HTTP/1.0" 200 176
+[01/Oct/2018 14:43:02] "GET /wx/get_all_goods HTTP/1.0" 200 737
+[01/Oct/2018 14:43:26] "GET /wx/get_all_goods HTTP/1.0" 200 737
+[01/Oct/2018 14:43:26] "GET /wx/get_coupon HTTP/1.0" 200 176
+[01/Oct/2018 14:48:26] "GET /wx/get_all_goods HTTP/1.0" 200 69
+[01/Oct/2018 14:48:26] "GET /wx/get_coupon HTTP/1.0" 200 69
+Not Found: /robots.txt
+[01/Oct/2018 16:13:36] "GET /robots.txt HTTP/1.0" 404 2079
+Not Found: /
+[01/Oct/2018 16:13:38] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[01/Oct/2018 16:13:39] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[01/Oct/2018 21:37:18] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[01/Oct/2018 22:49:03] "GET / HTTP/1.0" 404 2031
