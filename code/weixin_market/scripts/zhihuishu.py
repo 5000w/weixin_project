@@ -95,5 +95,5 @@ def get_data_by_zhihuishu(username,password):
         list_data.append(dict)
     return get_return_dict('1','查询成功',list_data)
 
-
-#print(get_data_by_zhihuishu('17391314633','ll19971017'))
+def run():
+    print(get_data_by_zhihuishu('13325465996','fzh19971115'))

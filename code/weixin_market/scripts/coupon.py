@@ -29,7 +29,7 @@ def get_coupon_db(id):
     user = Weixin_user.objects.get(id=id)
     return [{'price' : obj.price,'state' : obj.state} for obj in user.coupon_set.filter()]
 
-###重置所有用户的优惠卷状态为启用
+###重置所有用户的优惠卷状态为启用--y有问题待修改
 def update_coupon_stateTo1():
    Coupon.objects.filter().update(state=1)
 

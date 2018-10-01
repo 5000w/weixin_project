@@ -21,7 +21,7 @@ output: {
 }
 
 
-查看优惠卷状态
+###查看优惠卷状态
 2.url: https://www.saber-toothed.xyz/wx/get_coupon
 input: {
 	
@@ -29,7 +29,7 @@ input: {
 output: {"succ": True, "msg": "", "data": {'list' : list}} ###0、1、2   1-可以使用 0-不能使用 2-已经使用 
 
 
-设置优惠卷状态
+###设置优惠卷状态
 3.url: https://www.saber-toothed.xyz/wx/set_coupon_sta
 input:{
 	'price' : 'login'   ##login 、share_once 、share_twice
@@ -39,7 +39,7 @@ input:{
 output: {"succ": True, "msg": "操作成功", "data": {}}
 
 
-获取全部商品
+###获取全部商品
 4、url: https://www.saber-toothed.xyz/wx/get_all_goods
 input:{
 
@@ -47,16 +47,24 @@ input:{
 #
 output: {"succ": True, "msg": "", "data": {'list' : [{'id' : 1, 'name': '刷课', 'count': 100, 'url': ''，price : 10 },....]}}
 
-分享时，解锁优惠卷
+###分享时，解锁优惠卷
 5、url: https://www.saber-toothed.xyz/wx/share_for_coupon
 input：{
 }
 output: {"succ": True, "msg": "", "data": {}}
 
-获取课程信息
+###获取课程信息
 6、url: https://www.saber-toothed.xyz/wx/get_class
 input：{
 	'type': 1           #int    1为智慧树 2为超星 
 	'phone_number' : '' #电话号码
 	'pwd' : 'pwd'       #密码
 }
+
+output: {"succ": True, "msg": "操作成功", "data": list[{'courseName': '关爱生命——急救与自救技能', 'planProgress': '2.4%'}, {'courseName': '高级英语写作', 'planProgress': '2.4%'}, {'courseName': '韩文那些事儿', 'planProgress': '2.4%'}, {'courseName': '不负卿春-大学生职业生涯规划', 'planProgress': '2.4%'}, {'course
+Name': '世界舞台上的中华文明', 'planProgress': '2.4%'}, {'courseName': '女生穿搭技巧', 'planProgress': '2.4%'}, {'courseName': '创业营销——创业新手营销实战指南', 'planProgress': '2.4%'}, {'courseName': '上大学，不迷茫', 'planProgress': '2.4%'}, {'courseName': '教你成为歌唱达人', 'planProgress': '2.4%'}
+]}
+
+###下订单，只有在支付成功的情况下
+
+
