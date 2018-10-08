@@ -59,6 +59,7 @@ input：{
 	'type': 1           #int    1为智慧树 2为超星 
 	'phone_number' : '' #电话号码
 	'pwd' : 'pwd'       #密码
+	'school_name' : 's' #学校名称
 }
 
 output: {"succ": True, "msg": "操作成功", "data": list[{'courseName': '关爱生命——急救与自救技能', 'planProgress': '2.4%'}, {'courseName': '高级英语写作', 'planProgress': '2.4%'}, {'courseName': '韩文那些事儿', 'planProgress': '2.4%'}, {'courseName': '不负卿春-大学生职业生涯规划', 'planProgress': '2.4%'}, {'course
@@ -73,7 +74,7 @@ input：{
 		'type' : 1,          #int    1为智慧树 2为超星 
 		'phone_number' : '17391314633', #电话号码
 		'pwd' : 'pwd',       #密码
-		'school_name' : '垃圾大学' ，#学校名称
+		'school_name' : '垃圾大学' ,#学校名称
 		'class_name' : ['关爱生命——急救与自救技能','女生穿搭技巧'，...]  #class_name
 	},
 	{...},

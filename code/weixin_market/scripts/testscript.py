@@ -36,13 +36,24 @@ def run():
 		'pwd' : 'fzh19971115',       #密码
 		'school_name' : '西安财经学院行知学院' ,#学校名称
 		'class_name' : ['关爱生命——急救与自救技能','女生穿搭技巧','上大学，不迷茫','教你成为歌唱达人','不负卿春-大学生职业生涯规划']  #class_name
-	}]
-    r = requests.post("https://www.saber-toothed.xyz/wx/add_order",
-                      headers={'openid': 'onAnm5apw-wPIaInTC_c45ZjLRl8', 'time': '1538243507'},
-                      json={'price': 9.9, 'class_data_list': class_data_list})
+	},
+        {
+            'type': 1,  # int    1为智慧树 2为超星
+            'phone_number': '18690489289',  # 电话号码
+            'pwd': '980708',  # 密码
+            'school_name': '西安财经学院行知学院',  # 学校名称
+            'class_name': ['关爱生命——急救与自救技能', '女生穿搭技巧', '上大学，不迷茫', '教你成为歌唱达人', '不负卿春-大学生职业生涯规划','创业营销——创业新手营销实战指南','高级英语写作']  # class_name
+        }
+    ]
+    # r = requests.post("https://www.saber-toothed.xyz/wx/add_order",
+    #                   headers={'openid': 'onAnm5apw-wPIaInTC_c45ZjLRl8', 'time': '1538243507'},
+    #                   json={'price': 9.9, 'class_data_list': class_data_list})
 
     # r = requests.post("https://www.saber-toothed.xyz/wx/get_class",
     #                   headers={'openid': 'onAnm5apw-wPIaInTC_c45ZjLRl8', 'time': '1538243507'},
-    #                   json={'type': 1, 'phone_number': '13325465996','pwd':'fzh19971115'})
+    #                   json={'type': 1, 'phone_number': '18690489289','pwd':'980708'})
 
+    r = requests.post("https://www.saber-toothed.xyz/wx/get_order_detail",
+                      headers={'openid': 'onAnm5apw-wPIaInTC_c45ZjLRl8', 'time': '1538243507'},
+                      json={})
     print(r.json())
