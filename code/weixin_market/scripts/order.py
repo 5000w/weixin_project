@@ -11,12 +11,18 @@ class name 使用数组传入，在后端转换为字符串
 phone_number 使用字符串传入，中间用 ， 隔开
 type 1 为智慧树，2 为超星
 '''
+
 ###class_name_list是一个数组
-def add_order(id,price,class_name_list,phone_number,pwd,type,school_name=''):
-    cname = ','.join(class_name_list)
+def add_order_(id,price,class_data_list):
+
     user = Weixin_user.objects.get(id=id)
     order_info =user.order_info_set.create(state = 'PAY',price = price)
-    order_info.class_info_set.create(class_name = cname,phone_number=phone_number,pwd=pwd,school_name=school_name,type=type)
+
+    #将class_name_list 中的值存入数据库class info，使用的为一个order id
+    for data in class_data_list:
+        class_name_list = data['class_name']
+        cname = ','.join(class_name_list)
+        order_info.class_info_set.create(class_name = cname ,phone_number=data['phone_number'],pwd=data['pwd'],school_name=data['school_name'],type=data['type'])
 
 
 #获得个人的order信息
@@ -67,7 +73,29 @@ def get_order_bytxt():
             count = count + len(x.class_name.split(','))
     file.write("总计："+ str(count) )
     file.close()
+
 def run():
     #add_order(1,100,['ca1','ca2','ce3','cessssssss'],'18581566204','pwd',1)
     #add_order(1, 10, ['现代市场营销素质与能力提升'], '17391314633', 'll19971017', 1,)
-    get_order(1)
+    print(123123)
+    lis =[{
+		'type' : 1,          #int    1为智慧树 2为超星
+		'phone_number' : '', #电话号码
+		'pwd' : 'pwd',       #密码
+		'school_name' : '垃圾大学' ,#学校名称
+		'class_name' : ['关爱生命——急救与自救技能','女生穿搭技巧']  #class_name
+	},{
+		'type' : 1,          #int    1为智慧树 2为超星
+		'phone_number' : '', #电话号码
+		'pwd' : 'pwd',       #密码
+		'school_name' : '垃圾大学' ,#学校名称
+		'class_name' : ['关爱生命——急救与自救技能','女生穿搭技巧']  #class_name
+	},{
+		'type' : 1,          #int    1为智慧树 2为超星
+		'phone_number' : '', #电话号码
+		'pwd' : 'pwd',       #密码
+		'school_name' : '垃圾大学' ,#学校名称
+		'class_name' : ['关爱生命——急救与自救技能','女生穿搭技巧']  #class_name
+	},
+	]
+    add_order_(4,9.9,lis)

@@ -8,6 +8,7 @@ from .login_interface.login_operation import write_login_header, generate_header
 import requests
 from weixin_market.settings import *
 from scripts.coupon import *
+from scripts.order import *
 from scripts.goods import *
 from . import pay
 from scripts.zhihuishu import *
@@ -139,3 +140,15 @@ def share_for_coupon(request):
 
     return JsonResponse(re_json)
 
+@check_header
+def add_order(request):
+
+    id = get_id_by_openid(request)
+
+    class_data_list = request['class_data_list']
+
+    add_order_(id,request['price'],class_data_list)
+
+    re_json = {"succ": True, "msg": "操作成功", "data": {}}
+
+    return JsonResponse(re_json)
