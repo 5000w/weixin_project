@@ -3,7 +3,8 @@ from weixin.models import Weixin_user
 from weixin.models import Coupon
 from weixin_market.settings import *
 from django.utils import timezone
-import pdb
+import requests
+import time
 logger = logging.getLogger("weixin.views")
 ###test
 def login_test(open_id):
@@ -28,3 +29,6 @@ def run():
     #login_add_coupon('test')
     list1 = [{'courseName': '现代市场营销素质与能力提升', 'planProgress': '5.6%'},{'....'},{'....'}]
     list2 = ['现代市场营销素质与能力提升','现代市场营销素质与能力提升']
+    a = int(time.time())
+    r = requests.get("https://www.saber-toothed.xyz/wx/get_class",headers={'openid':'onAnm5apw-wPIaInTC_c45ZjLRl8','time':'1538243507'},json={'type':1,'phone_number':'15511211112','pwd':'pwd'})
+    print(r.json())
