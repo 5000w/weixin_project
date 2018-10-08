@@ -66,5 +66,22 @@ Name': '世界舞台上的中华文明', 'planProgress': '2.4%'}, {'courseName':
 ]}
 
 ###下订单，只有在支付成功的情况下
+7、url: https://www.saber-toothed.xyz/wx/add_order
+input：{
+	'price' : 9.9      	 	#float  价格
+	'class_data_list' : [{
+		'type' : 1,          #int    1为智慧树 2为超星 
+		'phone_number' : '17391314633', #电话号码
+		'pwd' : 'pwd',       #密码
+		'school_name' : '垃圾大学' ，#学校名称
+		'class_name' : ['关爱生命——急救与自救技能','女生穿搭技巧'，...]  #class_name
+	},
+	{...},
+	{...}]
+}
+
+output：
+{"succ": True, "msg": "操作成功", "data": {}}
+
 
 

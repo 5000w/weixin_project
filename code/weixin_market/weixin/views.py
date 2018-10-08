@@ -152,3 +152,14 @@ def add_order(request):
     re_json = {"succ": True, "msg": "操作成功", "data": {}}
 
     return JsonResponse(re_json)
+
+@check_header
+def get_order_detail(request):
+
+    id = get_id_by_openid(request)
+
+    data = get_order (id)
+
+    re_json = {"succ": True, "msg": "操作成功", "data": data}
+
+    return re_json

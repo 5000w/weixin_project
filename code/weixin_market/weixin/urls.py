@@ -12,4 +12,5 @@ urlpatterns = [
     path('payOrder', views.payOrder, name='payOrder'),
     path('payback', views.payback, name='payback'),
     path('add_order', views.add_order, name='add_order'),
+    path('get_order_detail', views.get_order_detail, name='get_order_detail'),
 ]

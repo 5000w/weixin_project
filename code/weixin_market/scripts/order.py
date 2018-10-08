@@ -43,9 +43,9 @@ def get_order(id):
     total_list=[]
     #首先遍历数据库里面的订单
     for i in data_list:
-        if i['type'] == 1: #智慧树
+        if i['type'] == 1:  #智慧树
             classlist= i['class_name'].split(',')
-            return_list = get_data(i['phone_number'], i['pwd'])['data']
+            return_list = get_data_by_zhihuishu(i['phone_number'], i['pwd'])['data']
             #把数据库里面的class_name进行遍历 找到对应的百分比
             for class_in_db in classlist:
                 for class_in_api in return_list:
@@ -56,8 +56,8 @@ def get_order(id):
         else:
             #调取超新的接口 还没写
             print(1)
-    print(data_list)
-    print(total_list)
+    #print(data_list)
+    return total_list
 #提供导出成txt 的接口
 def get_order_bytxt():
     class_info =Class_info.objects.filter()
@@ -98,4 +98,5 @@ def run():
 		'class_name' : ['关爱生命——急救与自救技能','女生穿搭技巧']  #class_name
 	},
 	]
-    add_order_(4,9.9,lis)
+    #add_order_(4,9.9,lis)
+    print(get_order(4))
