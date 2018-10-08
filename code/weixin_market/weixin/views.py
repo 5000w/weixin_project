@@ -182,7 +182,8 @@ def download_txt(request):
             else:
                 break
 
-    response_ = StreamingHttpResponse(file_iterator(file_name))
+    fn = open(file_name, 'rb')
+    response_ = StreamingHttpResponse(file_iterator(fn))
     response_['Content-Type'] = 'application/octet-stream'
     response_['Content-Disposition'] = 'attachment;filename="data.txt"'
 
