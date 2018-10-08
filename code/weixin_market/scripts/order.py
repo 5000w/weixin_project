@@ -40,8 +40,11 @@ def get_order(id):
 
     data_list=[]
 
+    #循环所有的订单
     for x in order_info:
+        #每个订单有多个class_info
         res_ = x.class_info_set.filter()
+        #如果这个订单存在class,就将每条class 存到data_list里面
         if res_.exists() :
             for class_data in res_:
                 res = class_data
@@ -49,26 +52,23 @@ def get_order(id):
 
     total_list=[]
 
-
-    #首先遍历数据库里面的订单
+    #首先遍历数据库里面的class信息，从上面写循环得到完整的data_list
     for i in data_list:
         if i['type'] == 1:  #智慧树
             classlist= i['class_name'].split(',')
             return_list = get_data_by_zhihuishu(i['phone_number'], i['pwd'])['data']
-           # print(return_list)
 
             #把数据库里面的class_name进行遍历 找到对应的百分比
             for class_in_db in classlist:
                 for class_in_api in return_list:
-
                     if class_in_api['courseName'] == class_in_db:
                         total_list.append(class_in_api)
                         break
 
         else:
             #调取超新的接口 还没写
-            print(1)
-    #print(data_list)
+            print("")
+
     return total_list
 #提供导出成txt 的接口
 def get_order_bytxt():
@@ -87,8 +87,6 @@ def get_order_bytxt():
     file.close()
 
 def run():
-    #add_order(1,100,['ca1','ca2','ce3','cessssssss'],'18581566204','pwd',1)
-    #add_order(1, 10, ['现代市场营销素质与能力提升'], '17391314633', 'll19971017', 1,)
 
     lis =[{
 		'type' : 1,          #int    1为智慧树 2为超星
@@ -111,4 +109,4 @@ def run():
 	},
 	]
     #add_order_(4,9.9,lis)
-    print(get_order(4))
+    print(get_order_bytxt())

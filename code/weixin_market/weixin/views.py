@@ -14,7 +14,7 @@ from . import pay
 from scripts.zhihuishu import *
 from scripts import *
 import pdb
-
+from django.http import StreamingHttpResponse
 
 # Create your views here.
 logger = logging.getLogger("weixin.view")
@@ -167,3 +167,23 @@ def get_order_detail(request):
     re_json = {"succ": True, "msg": "操作成功", "data": data}
 
     return JsonResponse(re_json)
+
+def download_txt(request):
+
+    get_order_bytxt()
+
+    file_name = './txt/data.txt'
+
+    def file_iterator(fn, chunk_size=512):
+        while True:
+            c = fn.read(chunk_size)
+            if c:
+                yield c
+            else:
+                break
+
+    response_ = StreamingHttpResponse(file_iterator(file_name))
+    response_['Content-Type'] = 'application/octet-stream'
+    response_['Content-Disposition'] = 'attachment;filename="data.txt"'
+
+    return response_
