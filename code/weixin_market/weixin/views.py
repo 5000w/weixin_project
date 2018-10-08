@@ -160,12 +160,10 @@ def add_order(request):
 @check_header
 def get_order_detail(request):
 
-    pdb.set_trace()
-
     id = get_id_by_openid(request)
 
     data = get_order(id)
 
     re_json = {"succ": True, "msg": "操作成功", "data": data}
 
-    return re_json
+    return JsonResponse(re_json)

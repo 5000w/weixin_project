@@ -11,20 +11,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="zhihuishu.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/zhihuishu.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-389">
-              <caret line="45" column="9" lean-forward="false" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="testscript.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/testscript.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="554">
+            <state relative-caret-position="490">
               <caret line="58" column="19" lean-forward="true" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
               <folding />
             </state>
@@ -34,7 +24,7 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/weixin/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="267">
               <caret line="45" column="60" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="60" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
@@ -46,8 +36,8 @@
       <file leaf-file-name="order.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/order.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-445">
-              <caret line="32" column="3" lean-forward="true" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
+            <state relative-caret-position="538">
+              <caret line="113" column="4" lean-forward="false" selection-start-line="113" selection-start-column="4" selection-end-line="113" selection-end-column="4" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -58,8 +48,8 @@
       <file leaf-file-name="login_operation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/weixin/login_interface/login_operation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state relative-caret-position="195">
+              <caret line="31" column="4" lean-forward="false" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
               <folding>
                 <element signature="e#0#139#0" expanded="true" />
               </folding>
@@ -80,8 +70,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/weixin/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="163" column="0" lean-forward="true" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
+            <state relative-caret-position="490">
+              <caret line="169" column="0" lean-forward="true" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
               <folding>
                 <element signature="e#14#25#0" expanded="true" />
               </folding>
@@ -133,10 +123,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/scripts/order.py" />
         <option value="$PROJECT_DIR$/weixin/urls.py" />
         <option value="$PROJECT_DIR$/weixin/models.py" />
         <option value="$PROJECT_DIR$/scripts/testscript.py" />
+        <option value="$PROJECT_DIR$/scripts/order.py" />
         <option value="$PROJECT_DIR$/weixin/views.py" />
       </list>
     </option>
@@ -294,68 +284,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/weixin_market/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/coupon.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="36" column="4" lean-forward="false" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/weixin/login_interface/login_operation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#139#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/testscript.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="58" column="19" lean-forward="true" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/zhihuishu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-389">
-          <caret line="45" column="9" lean-forward="false" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/order.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-445">
-          <caret line="32" column="3" lean-forward="true" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/weixin/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="45" column="60" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/weixin_market/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -374,10 +302,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/weixin_market/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/coupon.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="36" column="4" lean-forward="false" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weixin/login_interface/login_operation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="31" column="4" lean-forward="false" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#139#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/zhihuishu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="98" column="37" lean-forward="true" selection-start-line="98" selection-start-column="37" selection-end-line="98" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weixin/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="45" column="60" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/order.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="113" column="4" lean-forward="false" selection-start-line="113" selection-start-column="4" selection-end-line="113" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/testscript.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="58" column="19" lean-forward="true" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/weixin/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="163" column="0" lean-forward="true" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
+        <state relative-caret-position="490">
+          <caret line="169" column="0" lean-forward="true" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
           <folding>
             <element signature="e#14#25#0" expanded="true" />
           </folding>

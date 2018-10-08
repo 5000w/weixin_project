@@ -32,23 +32,35 @@ def add_order_(id,price,class_data_list):
 3、查询后自己的classname比较
 '''
 def get_order(id):
+    #根据用户找到user obj
     user = Weixin_user.objects.get(id=id)
+
+    #找到这个用户的所有订单
     order_info = user.order_info_set.filter()
+
     data_list=[]
+
     for x in order_info:
-        res = x.class_info_set.filter()
-        if res.exists() :
-            res =res[0]
-            data_list.append({'type' : res.type,'class_name' : res.class_name ,'phone_number' : res.phone_number,'pwd' : res.pwd, 'school_name' : res.school_name})
+        res_ = x.class_info_set.filter()
+        if res_.exists() :
+            for class_data in res_:
+                res = class_data
+                data_list.append({'type' : res.type,'class_name' : res.class_name ,'phone_number' : res.phone_number,'pwd' : res.pwd, 'school_name' : res.school_name})
+
     total_list=[]
+
+
     #首先遍历数据库里面的订单
     for i in data_list:
         if i['type'] == 1:  #智慧树
             classlist= i['class_name'].split(',')
             return_list = get_data_by_zhihuishu(i['phone_number'], i['pwd'])['data']
+           # print(return_list)
+
             #把数据库里面的class_name进行遍历 找到对应的百分比
             for class_in_db in classlist:
                 for class_in_api in return_list:
+
                     if class_in_api['courseName'] == class_in_db:
                         total_list.append(class_in_api)
                         break
@@ -77,7 +89,7 @@ def get_order_bytxt():
 def run():
     #add_order(1,100,['ca1','ca2','ce3','cessssssss'],'18581566204','pwd',1)
     #add_order(1, 10, ['现代市场营销素质与能力提升'], '17391314633', 'll19971017', 1,)
-    print(123123)
+
     lis =[{
 		'type' : 1,          #int    1为智慧树 2为超星
 		'phone_number' : '', #电话号码
