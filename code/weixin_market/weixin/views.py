@@ -145,13 +145,13 @@ def share_for_coupon(request):
 @check_header
 def add_order(request):
 
-    pdb.set_trace()
-
     id = get_id_by_openid(request)
 
-    class_data_list = request['class_data_list']
+    get_data = json.loads(request.body)
 
-    add_order_(id,request['price'],class_data_list)
+    class_data_list = get_data['class_data_list']
+
+    add_order_(id,get_data['price'],class_data_list)
 
     re_json = {"succ": True, "msg": "操作成功", "data": {}}
 
@@ -159,7 +159,6 @@ def add_order(request):
 
 @check_header
 def get_order_detail(request):
-
 
     id = get_id_by_openid(request)
 
