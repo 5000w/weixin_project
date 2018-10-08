@@ -13,6 +13,8 @@ from scripts.goods import *
 from . import pay
 from scripts.zhihuishu import *
 from scripts import *
+import pdb
+
 
 # Create your views here.
 logger = logging.getLogger("weixin.view")
@@ -143,6 +145,8 @@ def share_for_coupon(request):
 @check_header
 def add_order(request):
 
+    pdb.set_trace()
+
     id = get_id_by_openid(request)
 
     class_data_list = request['class_data_list']
@@ -155,6 +159,7 @@ def add_order(request):
 
 @check_header
 def get_order_detail(request):
+
 
     id = get_id_by_openid(request)
 
