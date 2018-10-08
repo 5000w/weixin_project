@@ -83,5 +83,10 @@ input：{
 output：
 {"succ": True, "msg": "操作成功", "data": {}}
 
+###查看个人订单信息
+8、url: https://www.saber-toothed.xyz/wx/get_order_detail
+input：{}
+output：{
+	"succ": True, "msg": "操作成功", "data": [{'courseName': '现代市场营销素质与能力提升', 'planProgress': '17.8%'}，{...}]
 
-
+}
