@@ -78,10 +78,10 @@ def get_order_bytxt():
     count=0
     for x in class_info:
         if x.type == 1 :
-            file.write("{4} {0} {1} {2} {3}\n".format(x.school_name,x.phone_number,x.pwd,x.class_name,'智慧树'))
+            file.write("{4} {0} {1} {2} {3}\n\r".format(x.school_name,x.phone_number,x.pwd,x.class_name,'智慧树'))
             count=count+len(x.class_name.split(','))
         else:
-            file.write("{4} {0} {1} {2} {3}\n".format(x.school_name, x.phone_number, x.pwd, x.class_name, '超星'))
+            file.write("{4} {0} {1} {2} {3}\n\r".format(x.school_name, x.phone_number, x.pwd, x.class_name, '超星'))
             count = count + len(x.class_name.split(','))
     file.write("总计："+ str(count) )
     file.close()
