@@ -209,13 +209,9 @@ def download_txt(request):
     response_['Content-Disposition'] = 'attachment;filename="data.txt"'
 
     return response_
-<<<<<<< HEAD
-=======
 
-#
 def initialize_conpon(request):
 
     initialize_conpon_()
 
     return JsonResponse("初始成功")
->>>>>>> 4f5df0a285a3f62605a54ddcc7666ff1386244c6
