@@ -19,6 +19,7 @@ def check_header(func):
         time = header["HTTP_TIME"]
         redis_header = get_header_from_redis(openid)
         try:
+            print(f'{redis_header["openid"]} \n {redis_header["time"]} \n {openid} \n {time}')
             if redis_header["openid"] != openid or str(redis_header["time"]) != time:
                 rsp = {"succ": False, "data": {}, "msg": "header 验证失败"}
                 return JsonResponse(rsp)

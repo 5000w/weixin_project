@@ -95,6 +95,7 @@ def payback(request):
 def get_coupon(request):
     id = get_id_by_openid(request)
     list = get_coupon_db(id)
+    print(list)
     re_json = {"succ": True, "msg": "操作成功", "data": {'list' : list}}
     return JsonResponse(re_json)
 
