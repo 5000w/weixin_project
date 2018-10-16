@@ -14,4 +14,5 @@ urlpatterns = [
     path('add_order', views.add_order, name='add_order'),
     path('get_order_detail', views.get_order_detail, name='get_order_detail'),
     path('download_txt', views.download_txt, name='download_txt'),
+    path('initialize_conpon', views.initialize_conpon, name='initialize_conpon'),
 ]

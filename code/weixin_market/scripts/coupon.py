@@ -68,9 +68,17 @@ def share_for_coupon_(id):
         else:
             return False
 
+#重置所有的优惠卷状态，慎用
+def initialize_conpon_():
+    cou_login = Coupon.objects.filter(price='login').update(state=1)
+
+    cou_once = Coupon.objects.filter(price='share_once').update(state=0)
+
+    cou_twice = Coupon.objects.filter(price='share_twice').update(state=0)
+
 def run():
     pass
     #login_add('test1'+str(1234))
     #update_coupon(3,'login',0)
     #update_coupon_stateTo1()
-    print(share_for_coupon_(4))
+    print(initialize_conpon())

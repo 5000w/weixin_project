@@ -26,7 +26,8 @@ output: {
 input: {
 	
 }
-output: {"succ": True, "msg": "", "data": {'list' : list}} ###0、1、2   1-可以使用 0-不能使用 2-已经使用 
+output: {"succ": True, "msg": "", "data": {0: 2, 1: 1, 2: 1}} ###key： 0、1、2   1-登录获取的 0-分享一次得到的 2-分享第二次得到的 
+															  ###value：0、1、2   1-可以使用 0-不能使用 2-已经使用 
 
 
 ###设置优惠卷状态
@@ -91,3 +92,6 @@ output：{
 	"succ": True, "msg": "操作成功", "data": [{'courseName': '现代市场营销素质与能力提升', 'planProgress': '17.8%'}，{...}]
 
 }
+
+###导出所有订单信息，提供给小老板，前端不管
+9、https://www.saber-toothed.xyz/wx/download_txt

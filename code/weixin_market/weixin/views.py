@@ -95,8 +95,13 @@ def payback(request):
 def get_coupon(request):
     id = get_id_by_openid(request)
     list = get_coupon_db(id)
-    print(list)
-    re_json = {"succ": True, "msg": "操作成功", "data": {'list' : list}}
+
+    #解析成传给前端的格式
+    #字典生成器
+    rdict = {index: value['state'] for index, value in enumerate(list)}
+
+    re_json = {"succ": True, "msg": "操作成功", "data": rdict}
+
     return JsonResponse(re_json)
 
 
@@ -104,6 +109,21 @@ def get_coupon(request):
 def set_coupon_sta(request):
     id = get_id_by_openid(request)
     get_data = json.loads(request.body)
+
+    #为配合前端接口修改格式，现在前端传入格式为
+    # {
+    #     'price': 0  ##0 、1、2
+    #     'state': 1  ##1 、0  1-可以使用 0-不能使用 2-已经使用
+    # }
+
+    if get_data['price'] == 0:
+        get_data['price'] = 'login'
+    elif get_data['price'] == 1:
+        get_data['price'] = 'share_once'
+    elif get_data['price'] == 2:
+        get_data['price'] = 'share_twice'
+
+
     update_coupon(id,get_data['price'],get_data['state'])
     re_json = {"succ": True, "msg": "操作成功", "data": {}}
     return JsonResponse(re_json)
@@ -172,7 +192,7 @@ def get_order_detail(request):
 def download_txt(request):
 
     get_order_bytxt()
-
+    ###网上超的代码
     file_name = './txt/data.txt'
 
     def file_iterator(fn, chunk_size=512):
@@ -189,3 +209,13 @@ def download_txt(request):
     response_['Content-Disposition'] = 'attachment;filename="data.txt"'
 
     return response_
+<<<<<<< HEAD
+=======
+
+#
+def initialize_conpon(request):
+
+    initialize_conpon_()
+
+    return JsonResponse("初始成功")
+>>>>>>> 4f5df0a285a3f62605a54ddcc7666ff1386244c6
