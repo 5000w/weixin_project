@@ -43,7 +43,7 @@ class Order_info(models.Model):
 #课程
 class Class_info(models.Model):
     order_id = models.ForeignKey(Order_info,on_delete=models.CASCADE,default=None) #订单id
-    class_name = models.CharField(max_length=50)    #课程的名字
+    class_name = models.CharField(max_length=1000)    #课程的名字
     class_percent = models.IntegerField(default=0,validators=[MaxValueValidator(100),MinValueValidator(0)]) #课程的百分比
     phone_number = models.CharField(max_length=50)
     pwd = models.CharField(max_length=50,default=None)

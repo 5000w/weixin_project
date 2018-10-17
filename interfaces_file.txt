@@ -26,7 +26,8 @@ output: {
 input: {
 	
 }
-output: {"succ": True, "msg": "", "data": {'list' : list}} ###0、1、2   1-可以使用 0-不能使用 2-已经使用 
+output: {"succ": True, "msg": "", "data": {0: 2, 1: 1, 2: 1}} ###key： 0、1、2   1-登录获取的 0-分享一次得到的 2-分享第二次得到的 
+															  ###value：0、1、2   1-可以使用 0-不能使用 2-已经使用 
 
 
 ###设置优惠卷状态
@@ -59,6 +60,7 @@ input：{
 	'type': 1           #int    1为智慧树 2为超星 
 	'phone_number' : '' #电话号码
 	'pwd' : 'pwd'       #密码
+	'school_name' : 's' #学校名称
 }
 
 output: {"succ": True, "msg": "操作成功", "data": list[{'courseName': '关爱生命——急救与自救技能', 'planProgress': '2.4%'}, {'courseName': '高级英语写作', 'planProgress': '2.4%'}, {'courseName': '韩文那些事儿', 'planProgress': '2.4%'}, {'courseName': '不负卿春-大学生职业生涯规划', 'planProgress': '2.4%'}, {'course
@@ -66,5 +68,30 @@ Name': '世界舞台上的中华文明', 'planProgress': '2.4%'}, {'courseName':
 ]}
 
 ###下订单，只有在支付成功的情况下
+7、url: https://www.saber-toothed.xyz/wx/add_order
+input：{
+	'price' : 9.9      	 	#float  价格
+	'class_data_list' : [{
+		'type' : 1,          #int    1为智慧树 2为超星 
+		'phone_number' : '17391314633', #电话号码
+		'pwd' : 'pwd',       #密码
+		'school_name' : '垃圾大学' ,#学校名称
+		'class_name' : ['关爱生命——急救与自救技能','女生穿搭技巧'，...]  #class_name
+	},
+	{...},
+	{...}]
+}
 
+output：
+{"succ": True, "msg": "操作成功", "data": {}}
 
+###查看个人订单信息
+8、url: https://www.saber-toothed.xyz/wx/get_order_detail
+input：{}
+output：{
+	"succ": True, "msg": "操作成功", "data": [{'courseName': '现代市场营销素质与能力提升', 'planProgress': '17.8%'}，{...}]
+
+}
+
+###导出所有订单信息，提供给小老板，前端不管
+9、https://www.saber-toothed.xyz/wx/download_txt

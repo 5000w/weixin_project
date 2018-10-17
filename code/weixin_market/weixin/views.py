@@ -8,10 +8,13 @@ from .login_interface.login_operation import write_login_header, generate_header
 import requests
 from weixin_market.settings import *
 from scripts.coupon import *
+from scripts.order import *
 from scripts.goods import *
 from . import pay
 from scripts.zhihuishu import *
 from scripts import *
+import pdb
+from django.http import StreamingHttpResponse
 
 # Create your views here.
 logger = logging.getLogger("weixin.view")
@@ -92,7 +95,13 @@ def payback(request):
 def get_coupon(request):
     id = get_id_by_openid(request)
     list = get_coupon_db(id)
-    re_json = {"succ": True, "msg": "操作成功", "data": {'list' : list}}
+
+    #解析成传给前端的格式
+    #字典生成器
+    rdict = {index: value['state'] for index, value in enumerate(list)}
+
+    re_json = {"succ": True, "msg": "操作成功", "data": rdict}
+
     return JsonResponse(re_json)
 
 
@@ -100,6 +109,21 @@ def get_coupon(request):
 def set_coupon_sta(request):
     id = get_id_by_openid(request)
     get_data = json.loads(request.body)
+
+    #为配合前端接口修改格式，现在前端传入格式为
+    # {
+    #     'price': 0  ##0 、1、2
+    #     'state': 1  ##1 、0  1-可以使用 0-不能使用 2-已经使用
+    # }
+
+    if get_data['price'] == 0:
+        get_data['price'] = 'login'
+    elif get_data['price'] == 1:
+        get_data['price'] = 'share_once'
+    elif get_data['price'] == 2:
+        get_data['price'] = 'share_twice'
+
+
     update_coupon(id,get_data['price'],get_data['state'])
     re_json = {"succ": True, "msg": "操作成功", "data": {}}
     return JsonResponse(re_json)
@@ -139,3 +163,55 @@ def share_for_coupon(request):
 
     return JsonResponse(re_json)
 
+@check_header
+def add_order(request):
+
+    id = get_id_by_openid(request)
+
+    get_data = json.loads(request.body)
+
+    class_data_list = get_data['class_data_list']
+
+    add_order_(id,get_data['price'],class_data_list)
+
+    re_json = {"succ": True, "msg": "操作成功", "data": {}}
+
+    return JsonResponse(re_json)
+
+@check_header
+def get_order_detail(request):
+
+    id = get_id_by_openid(request)
+
+    data = get_order(id)
+
+    re_json = {"succ": True, "msg": "操作成功", "data": data}
+
+    return JsonResponse(re_json)
+
+def download_txt(request):
+
+    get_order_bytxt()
+    ###网上超的代码
+    file_name = './txt/data.txt'
+
+    def file_iterator(fn, chunk_size=512):
+        while True:
+            c = fn.read(chunk_size)
+            if c:
+                yield c
+            else:
+                break
+
+    fn = open(file_name, 'rb')
+    response_ = StreamingHttpResponse(file_iterator(fn))
+    response_['Content-Type'] = 'application/octet-stream'
+    response_['Content-Disposition'] = 'attachment;filename="data.txt"'
+
+    return response_
+
+def initialize_conpon(request):
+
+    initialize_conpon_()
+
+    return JsonResponse("初始成功")
