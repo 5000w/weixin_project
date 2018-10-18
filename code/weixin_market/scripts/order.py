@@ -97,6 +97,9 @@ def get_order_bytxt():
     #默认为0，设置为1，为统计过的条数
     class_info.update(class_percent='1')
 
+def clear_txt():
+    f = open('./txt/data.txt','w')
+    f.close()
 
 def run():
 
