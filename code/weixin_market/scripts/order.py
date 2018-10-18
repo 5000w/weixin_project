@@ -2,6 +2,9 @@ from weixin.models import Weixin_user
 from weixin.models import Class_info
 from .zhihuishu import *
 
+import re
+
+
 from django.utils import timezone
 import time
 
@@ -74,21 +77,21 @@ def get_order(id):
 def get_order_bytxt():
     class_info =Class_info.objects.filter(class_percent=0)
 
-    file = open("./txt/data.txt", "w")
-    count=0
-    for x in class_info:
-        if x.type == 1 :
-            file.write("{4} {0} {1} {2} {3}\r\n".format(x.school_name,x.phone_number,x.pwd,x.class_name,'智慧树'))
-            count=count+len(x.class_name.split(','))
+    with open('/Users/Mr.Long/Desktop/data.txt', 'a') as file:
+        count=0
+        for x in class_info:
+            if x.type == 1 :
+                file.write("{4} {0} {1} {2} {3}\r\n".format(x.school_name,x.phone_number,x.pwd,x.class_name,'智慧树'))
+                count=count+len(x.class_name.split(','))
 
-        else:
-            file.write("{4} {0} {1} {2} {3}\r\n".format(x.school_name, x.phone_number, x.pwd, x.class_name, '超星'))
-            count = count + len(x.class_name.split(','))
+            else:
+                file.write("{4} {0} {1} {2} {3}\r\n".format(x.school_name, x.phone_number, x.pwd, x.class_name, '超星'))
+                count = count + len(x.class_name.split(','))
 
-    file.write("总计：{0} \r\n".format(count))
-    file.write("---------------------------------------------------------\r\n")
+        file.write("总计：{0} \r\n".format(count))
+        file.write("---------------------------------------------------------\r\n")
 
-    file.close()
+        file.close()
 
     #设置一个标识字段，使用暂时没有用的class_percent字段作为标识字段
     #默认为0，设置为1，为统计过的条数
