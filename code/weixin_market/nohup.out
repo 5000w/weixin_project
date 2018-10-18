@@ -4929,3 +4929,102 @@ onAnm5UnBKJ9X-1738uWpA2cJPdI
  1539745019 
  onAnm5UnBKJ9X-1738uWpA2cJPdI 
  1539745019
+[18/Oct/2018 19:24:56] "GET /wx/get_coupon HTTP/1.0" 200 83
+[18/Oct/2018 19:24:56] "GET /wx/get_all_goods HTTP/1.0" 200 737
+[18/Oct/2018 19:24:57] "GET /wx/get_coupon HTTP/1.0" 200 83
+[18/Oct/2018 19:26:03] "GET /wx/get_all_goods HTTP/1.0" 200 737
+[18/Oct/2018 19:26:03] "GET /wx/get_coupon HTTP/1.0" 200 83
+[18/Oct/2018 19:26:03] "GET /wx/get_coupon HTTP/1.0" 200 83
+[18/Oct/2018 19:28:10] "GET /wx/get_coupon HTTP/1.0" 200 83
+[18/Oct/2018 19:28:10] "GET /wx/get_all_goods HTTP/1.0" 200 737
+[18/Oct/2018 19:28:11] "GET /wx/get_coupon HTTP/1.0" 200 83
+[18/Oct/2018 19:29:51] "GET /wx/get_all_goods HTTP/1.0" 200 737
+[18/Oct/2018 19:29:51] "GET /wx/get_coupon HTTP/1.0" 200 83
+[18/Oct/2018 19:29:53] "GET /wx/get_coupon HTTP/1.0" 200 83
+[18/Oct/2018 19:31:20] "GET /wx/get_all_goods HTTP/1.0" 200 737
+[18/Oct/2018 19:31:20] "GET /wx/get_coupon HTTP/1.0" 200 83
+[18/Oct/2018 19:31:22] "GET /wx/get_coupon HTTP/1.0" 200 83
+[18/Oct/2018 19:36:20] "GET /wx/download_txt HTTP/1.0" 200 502
+[18/Oct/2018 19:36:33] "GET /wx/download_txt HTTP/1.0" 200 574
+[18/Oct/2018 19:36:40] "GET /wx/download_txt HTTP/1.0" 200 646
+Internal Server Error: /wx/clear_txt
+Traceback (most recent call last):
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin/views.py", line 217, in clear_txt
+    return JsonResponse("清除成功")
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[18/Oct/2018 19:36:53] "GET /wx/clear_txt HTTP/1.0" 500 68377
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 18, 2018 - 19:13:03
+Django version 2.1, using settings 'weixin_market.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+onAnm5UnBKJ9X-1738uWpA2cJPdI 
+ 1539745019 
+ onAnm5UnBKJ9X-1738uWpA2cJPdI 
+ 1539745019
+onAnm5UnBKJ9X-1738uWpA2cJPdI 
+ 1539745019 
+ onAnm5UnBKJ9X-1738uWpA2cJPdI 
+ 1539745019
+onAnm5UnBKJ9X-1738uWpA2cJPdI 
+ 1539745019 
+ onAnm5UnBKJ9X-1738uWpA2cJPdI 
+ 1539745019
+onAnm5UnBKJ9X-1738uWpA2cJPdI 
+ 1539745019 
+ onAnm5UnBKJ9X-1738uWpA2cJPdI 
+ 1539745019
+onAnm5UnBKJ9X-1738uWpA2cJPdI 
+ 1539745019 
+ onAnm5UnBKJ9X-1738uWpA2cJPdI 
+ 1539745019
+onAnm5UnBKJ9X-1738uWpA2cJPdI 
+ 1539745019 
+ onAnm5UnBKJ9X-1738uWpA2cJPdI 
+ 1539745019
+onAnm5UnBKJ9X-1738uWpA2cJPdI 
+ 1539745019 
+ onAnm5UnBKJ9X-1738uWpA2cJPdI 
+ 1539745019
+onAnm5UnBKJ9X-1738uWpA2cJPdI 
+ 1539745019 
+ onAnm5UnBKJ9X-1738uWpA2cJPdI 
+ 1539745019
+onAnm5UnBKJ9X-1738uWpA2cJPdI 
+ 1539745019 
+ onAnm5UnBKJ9X-1738uWpA2cJPdI 
+ 1539745019
+onAnm5UnBKJ9X-1738uWpA2cJPdI 
+ 1539745019 
+ onAnm5UnBKJ9X-1738uWpA2cJPdI 
+ 1539745019
+onAnm5UnBKJ9X-1738uWpA2cJPdI 
+ 1539745019 
+ onAnm5UnBKJ9X-1738uWpA2cJPdI 
+ 1539745019
+onAnm5UnBKJ9X-1738uWpA2cJPdI 
+ 1539745019 
+ onAnm5UnBKJ9X-1738uWpA2cJPdI 
+ 1539745019
+onAnm5UnBKJ9X-1738uWpA2cJPdI 
+ 1539745019 
+ onAnm5UnBKJ9X-1738uWpA2cJPdI 
+ 1539745019
+onAnm5UnBKJ9X-1738uWpA2cJPdI 
+ 1539745019 
+ onAnm5UnBKJ9X-1738uWpA2cJPdI 
+ 1539745019
+onAnm5UnBKJ9X-1738uWpA2cJPdI 
+ 1539745019 
+ onAnm5UnBKJ9X-1738uWpA2cJPdI 
+ 1539745019
