@@ -77,7 +77,7 @@ def get_order(id):
 def get_order_bytxt():
     class_info =Class_info.objects.filter(class_percent=0)
 
-    with open('/Users/Mr.Long/Desktop/data.txt', 'a') as file:
+    with open('./txt/data.txt', 'a') as file:
         count=0
         for x in class_info:
             if x.type == 1 :
