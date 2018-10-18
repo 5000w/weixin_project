@@ -72,19 +72,28 @@ def get_order(id):
     return total_list
 #提供导出成txt 的接口
 def get_order_bytxt():
-    class_info =Class_info.objects.filter()
+    class_info =Class_info.objects.filter(class_percent=0)
 
     file = open("./txt/data.txt", "w")
     count=0
     for x in class_info:
         if x.type == 1 :
-            file.write("{4} {0} {1} {2} {3}\n\r".format(x.school_name,x.phone_number,x.pwd,x.class_name,'智慧树'))
+            file.write("{4} {0} {1} {2} {3}\r\n".format(x.school_name,x.phone_number,x.pwd,x.class_name,'智慧树'))
             count=count+len(x.class_name.split(','))
+            file.write("总计：" + str(count))
         else:
-            file.write("{4} {0} {1} {2} {3}\n\r".format(x.school_name, x.phone_number, x.pwd, x.class_name, '超星'))
+            file.write("{4} {0} {1} {2} {3}\r\n".format(x.school_name, x.phone_number, x.pwd, x.class_name, '超星'))
             count = count + len(x.class_name.split(','))
-    file.write("总计："+ str(count) )
+            file.write("总计：" + str(count))
+
+    file.write("---------------------------------------------------------")
+
     file.close()
+
+    #设置一个标识字段，使用暂时没有用的class_percent字段作为标识字段
+    #默认为0，设置为1，为统计过的条数
+    class_info.update(class_percent='1')
+
 
 def run():
 

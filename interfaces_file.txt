@@ -33,9 +33,9 @@ output: {"succ": True, "msg": "", "data": {0: 2, 1: 1, 2: 1}} ###key： 0、1、
 ###设置优惠卷状态
 3.url: https://www.saber-toothed.xyz/wx/set_coupon_sta
 input:{
-	'price' : 'login'   ##login 、share_once 、share_twice
-	'state' : 1  ##1 、0  1-可以使用 0-不能使用 2-已经使用 
-}
+        'price': 0  ##0 、1、2
+        'state': 1  ##1 、0  1-可以使用 0-不能使用 2-已经使用
+    }
 
 output: {"succ": True, "msg": "操作成功", "data": {}}
 
@@ -95,3 +95,6 @@ output：{
 
 ###导出所有订单信息，提供给小老板，前端不管
 9、https://www.saber-toothed.xyz/wx/download_txt
+
+###重置所有优惠卷状态，提供给小老板，前端不管
+10、https://www.saber-toothed.xyz/wx/initialize_conpon
