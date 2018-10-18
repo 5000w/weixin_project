@@ -46,6 +46,7 @@ def payOrder(request):
     import time
     if request.method == 'POST':
         price = json.loads(request.body)["price"] # 获取价格
+        price = round(price)
         client_ip = request.META["HTTP_X_REAL_IP"] # 获取客户端ip
         #openid = "onAnm5WbhguBA6qhbbg1f7N_zYxA"
         openid = request.META["HTTP_OPENID"] # 获取小程序openid
@@ -210,7 +211,6 @@ def download_txt(request):
 
     return response_
 
-#
 def initialize_conpon(request):
 
     initialize_conpon_()

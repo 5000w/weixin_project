@@ -91,7 +91,7 @@ def get_data_by_zhihuishu(username,password):
     for b in a["maps"]:
         dict= {}
         dict['courseName'] = b['courseName']
-        dict['planProgress'] = b['planProgress']
+        dict['planProgress'] = b['actualProgress']
         list_data.append(dict)
     return get_return_dict('1','查询成功',list_data)
 
