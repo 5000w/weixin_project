@@ -211,6 +211,11 @@ def download_txt(request):
 
     return response_
 
+def clear_txt(request):
+    f = open('./txt/data.txt','w')
+    f.close()
+    return JsonResponse({"msg":"清除成功"})
+
 def initialize_conpon(request):
 
     initialize_conpon_()
