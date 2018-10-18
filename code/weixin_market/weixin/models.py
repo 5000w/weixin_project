@@ -48,7 +48,9 @@ class Class_info(models.Model):
     phone_number = models.CharField(max_length=50)
     pwd = models.CharField(max_length=50,default=None)
     school_name = models.CharField(max_length=50,default=None)
-    type = models.IntegerField(default=0) #1为智慧树 2为超星
+    type = models.IntegerField(default=0) #1为智慧树 2为超星 #3为其他
+    platform_name = models.CharField(max_length=50)
+
 
 #商品
 class Goods(models.Model):
