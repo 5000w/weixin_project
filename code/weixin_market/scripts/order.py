@@ -85,8 +85,8 @@ def get_order_bytxt():
             file.write("{4} {0} {1} {2} {3}\r\n".format(x.school_name, x.phone_number, x.pwd, x.class_name, '超星'))
             count = count + len(x.class_name.split(','))
 
-    file.write("总计：" + str(count))
-    file.write("---------------------------------------------------------")
+    file.write("总计：{0} \r\n".format(count))
+    file.write("---------------------------------------------------------\r\n")
 
     file.close()
 
