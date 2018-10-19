@@ -25,7 +25,7 @@ def add_order_(id,price,class_data_list):
     for data in class_data_list:
         class_name_list = data['class_name']
         cname = ','.join(class_name_list)
-        order_info.class_info_set.create(class_name = cname ,phone_number=data['phone_number'],pwd=data['pwd'],school_name=data['school_name'],type=data['type'])
+        order_info.class_info_set.create(class_name = cname ,phone_number=data['phone_number'],pwd=data['pwd'],school_name=data['school_name'],type=data['type'],platform_name=data['platform_name'])
 
 
 #获得个人的order信息
@@ -62,14 +62,23 @@ def get_order(id):
             return_list = get_data_by_zhihuishu(i['phone_number'], i['pwd'])['data']
 
             #把数据库里面的class_name进行遍历 找到对应的百分比
+
+            #class_in_db 是数据库中每个class的name
             for class_in_db in classlist:
                 for class_in_api in return_list:
                     if class_in_api['courseName'] == class_in_db:
                         total_list.append(class_in_api)
                         break
 
-        else:
-            #调取超新的接口 还没写
+        elif i['type'] == 3:   #其他
+
+            classlist = i['class_name'].split(',')
+            # class_in_db 是数据库中每个class的name
+            for class_in_db in classlist:
+                total_list.append({'courseName': class_in_db, 'planProgress': '0%'})
+
+        elif i['type'] == 2:
+            # 调取超新的接口 还没写
             print("")
 
     return total_list
@@ -84,8 +93,12 @@ def get_order_bytxt():
                 file.write("{4} {0} {1} {2} {3}\r\n".format(x.school_name,x.phone_number,x.pwd,x.class_name,'智慧树'))
                 count=count+len(x.class_name.split(','))
 
-            else:
+            elif x.type == 2 :
                 file.write("{4} {0} {1} {2} {3}\r\n".format(x.school_name, x.phone_number, x.pwd, x.class_name, '超星'))
+                count = count + len(x.class_name.split(','))
+
+            elif x.type == 3 :
+                file.write("{4} {0} {1} {2} {3}\r\n".format(x.school_name, x.phone_number, x.pwd, x.class_name, x.platform_name))
                 count = count + len(x.class_name.split(','))
 
         file.write("总计：{0} \r\n".format(count))
@@ -124,4 +137,4 @@ def run():
 	},
 	]
     #add_order_(4,9.9,lis)
-    print(get_order_bytxt())
+    print(get_order(5))
