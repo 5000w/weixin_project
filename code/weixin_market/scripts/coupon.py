@@ -77,8 +77,7 @@ def initialize_conpon_():
     cou_twice = Coupon.objects.filter(price='share_twice').update(state=0)
 
 def run():
-    pass
     #login_add('test1'+str(1234))
     #update_coupon(3,'login',0)
     #update_coupon_stateTo1()
-    print(initialize_conpon())
+    print(initialize_conpon_())
