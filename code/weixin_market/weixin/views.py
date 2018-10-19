@@ -46,6 +46,7 @@ def payOrder(request):
     import time
     if request.method == 'POST':
         price = json.loads(request.body)["price"] # 获取价格
+        price = round(price)
         client_ip = request.META["HTTP_X_REAL_IP"] # 获取客户端ip
         #openid = "onAnm5WbhguBA6qhbbg1f7N_zYxA"
         openid = request.META["HTTP_OPENID"] # 获取小程序openid
@@ -209,6 +210,11 @@ def download_txt(request):
     response_['Content-Disposition'] = 'attachment;filename="data.txt"'
 
     return response_
+
+def clear_txt(request):
+    f = open('./txt/data.txt','w')
+    f.close()
+    return JsonResponse({"msg":"清除成功"})
 
 def initialize_conpon(request):
 

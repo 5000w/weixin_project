@@ -33,9 +33,9 @@ output: {"succ": True, "msg": "", "data": {0: 2, 1: 1, 2: 1}} ###key： 0、1、
 ###设置优惠卷状态
 3.url: https://www.saber-toothed.xyz/wx/set_coupon_sta
 input:{
-	'price' : 'login'   ##login 、share_once 、share_twice
-	'state' : 1  ##1 、0  1-可以使用 0-不能使用 2-已经使用 
-}
+        'price': 0  ##0 、1、2
+        'state': 1  ##1 、0  1-可以使用 0-不能使用 2-已经使用
+    }
 
 output: {"succ": True, "msg": "操作成功", "data": {}}
 
@@ -72,11 +72,12 @@ Name': '世界舞台上的中华文明', 'planProgress': '2.4%'}, {'courseName':
 input：{
 	'price' : 9.9      	 	#float  价格
 	'class_data_list' : [{
-		'type' : 1,          #int    1为智慧树 2为超星 
+		'type' : 1,          #int    1为智慧树 2为超星 3为其他
 		'phone_number' : '17391314633', #电话号码
 		'pwd' : 'pwd',       #密码
 		'school_name' : '垃圾大学' ,#学校名称
 		'class_name' : ['关爱生命——急救与自救技能','女生穿搭技巧'，...]  #class_name
+		'platform_name' : '平台名称'  #平台名称 ，如果type为1和2就传其他
 	},
 	{...},
 	{...}]
@@ -95,3 +96,9 @@ output：{
 
 ###导出所有订单信息，提供给小老板，前端不管
 9、https://www.saber-toothed.xyz/wx/download_txt
+
+###重置所有优惠卷状态，提供给小老板，前端不管
+10、https://www.saber-toothed.xyz/wx/initialize_conpon
+
+###重置txt，提供给小老板，前端不管
+11、https://www.saber-toothed.xyz/wx/clear_txt
