@@ -126,8 +126,8 @@ def check_by_Sid(sid,password,name):
     url_for_login = "https://passport.zhihuishu.com/user/validateCodeAndPassword"
 
     value ={
-        'code:' : sid,
-        'password:' : password,
+        'code' : sid,
+        'password' : password,
         'schoolId': str(school_id),
         'captcha' : ''
     }
