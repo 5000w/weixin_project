@@ -20,6 +20,7 @@ url1="https://passport.zhihuishu.com/login?service=http://online.zhihuishu.com/o
 
 user_agent = r'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36'
 headers = {'User-Agent': user_agent, 'Connection': 'keep-alive' ,'Host' : 'passport.zhihuishu.com' ,'Referer' : 'https://passport.zhihuishu.com/login?service=http://online.zhihuishu.com/onlineSchool/'}
+headers1 = {'User-Agent': user_agent, 'Connection': 'keep-alive' ,'Host' : 'passport.zhihuishu.com' ,'Referer' : 'https://passport.zhihuishu.com/login?service=http://online.zhihuishu.com/onlineSchool/'}
 
 
 
@@ -95,5 +96,83 @@ def get_data_by_zhihuishu(username,password):
         list_data.append(dict)
     return get_return_dict('1','查询成功',list_data)
 
+#根据学号进行查询
+def check_by_Sid(sid,password,name):
+
+    session = requests.session()
+    try:
+        r = session.get(url1, timeout=30)
+        r.raise_for_status()
+    except:
+
+        return get_return_dict('-1', '网络异常请重试', '')
+
+    url_school_list  = "https://passport.zhihuishu.com/user/getAllSchool?date=Tue%20Nov%2013%202018%2014:20:13%20GMT+0800%20(%E5%8F%B0%E5%8C%97%E6%A0%87%E5%87%86%E6%97%B6%E9%97%B4)"
+
+
+    try:
+        r = session.post(url_school_list, timeout=30)
+        r.raise_for_status()
+    except:
+
+        return get_return_dict('-1', '网络异常请重试', '')
+
+    list_schoohID = r.json()['listSchool']
+
+    name_list = [x['name'] for x in list_schoohID]
+
+    school_id = list_schoohID[name_list.index(name)]['schoolId']
+
+    url_for_login = "https://passport.zhihuishu.com/user/validateCodeAndPassword"
+
+    value ={
+        'code' : sid,
+        'password' : password,
+        'schoolId': str(school_id),
+        'captcha' : ''
+    }
+
+    r_total = session.post(url_for_login,data=value,headers=headers)
+
+
+
+
+
+
+
+    url_for_cookie ="https://passport.zhihuishu.com/login?pwd="+r_total.json()['pwd']+"&service=http://online.zhihuishu.com/onlineSchool/"
+
+
+    res = session.get(url_for_cookie,headers=headers)
+
+
+
+    cookiedict = requests.utils.dict_from_cookiejar(session.cookies)
+
+
+
+    if 'CASLOGC' not in cookiedict.keys():
+        return get_return_dict('-1','账号或者密码错误','')
+    else:
+        data1 = {
+            "loadType": 0
+        }
+        try:
+            r = session.post("http://online.zhihuishu.com/onlineSchool/json/student/loadStuCourseRecruit", data=data1,
+                             headers=headers)
+            r.raise_for_status()
+        except:
+
+            return get_return_dict('-1', '网络异常请重试', '')
+        a = r.json()
+        # print(a)
+        list_data = []
+        for b in a["maps"]:
+            dict = {}
+            dict['courseName'] = b['courseName']
+            dict['planProgress'] = b['actualProgress']
+            list_data.append(dict)
+        return get_return_dict('1', '查询成功', list_data)
+
 def run():
-    print(get_data_by_zhihuishu('13325465996','fzh19971115'))
+    print(check_by_Sid('1710044209','123456a','咸阳师范学院'))

@@ -16,4 +16,5 @@ urlpatterns = [
     path('download_txt', views.download_txt, name='download_txt'),
     path('initialize_conpon', views.initialize_conpon, name='initialize_conpon'),
     path('clear_txt',views.clear_txt,name="clear_txt"),
+    path('check_by_sid',views.check_by_sid,name="check_by_sid"),
 ]
