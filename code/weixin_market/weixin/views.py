@@ -221,3 +221,16 @@ def initialize_conpon(request):
     initialize_conpon_()
 
     return JsonResponse({"msg": "操作成功"})
+
+
+def check_by_sid(request):
+
+
+    get_data = json.loads(request.body)
+    sname = get_data['schoolname']
+    sid = get_data['sid']
+    pwd = get_data['pwd']
+
+    get_data_ = check_by_Sid(sid, pwd,sname)
+
+    return JsonResponse(get_data_)

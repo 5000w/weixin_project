@@ -101,7 +101,7 @@ def check_by_Sid(sid,password,name):
 
     session = requests.session()
     try:
-        r = session.get(url1, timeout=10)
+        r = session.get(url1, timeout=30)
         r.raise_for_status()
     except:
 
@@ -111,7 +111,7 @@ def check_by_Sid(sid,password,name):
 
 
     try:
-        r = session.post(url_school_list, timeout=10)
+        r = session.post(url_school_list, timeout=30)
         r.raise_for_status()
     except:
 
@@ -132,18 +132,47 @@ def check_by_Sid(sid,password,name):
         'captcha' : ''
     }
 
-    print(value)
-
     r_total = session.post(url_for_login,data=value,headers=headers)
 
-    print(r_total)
+
+
+
+
+
+
+    url_for_cookie ="https://passport.zhihuishu.com/login?pwd="+r_total.json()['pwd']+"&service=http://online.zhihuishu.com/onlineSchool/"
+
+
+    res = session.get(url_for_cookie,headers=headers)
+
+
 
     cookiedict = requests.utils.dict_from_cookiejar(session.cookies)
 
-    print(session.cookies)
+
 
     if 'CASLOGC' not in cookiedict.keys():
         return get_return_dict('-1','账号或者密码错误','')
+    else:
+        data1 = {
+            "loadType": 0
+        }
+        try:
+            r = session.post("http://online.zhihuishu.com/onlineSchool/json/student/loadStuCourseRecruit", data=data1,
+                             headers=headers)
+            r.raise_for_status()
+        except:
+
+            return get_return_dict('-1', '网络异常请重试', '')
+        a = r.json()
+        # print(a)
+        list_data = []
+        for b in a["maps"]:
+            dict = {}
+            dict['courseName'] = b['courseName']
+            dict['planProgress'] = b['actualProgress']
+            list_data.append(dict)
+        return get_return_dict('1', '查询成功', list_data)
 
 def run():
     print(check_by_Sid('1710044209','123456a','咸阳师范学院'))
