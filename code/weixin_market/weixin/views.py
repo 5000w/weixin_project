@@ -135,7 +135,7 @@ def get_all_goods(request):
     re_json = {"succ": True, "msg": "操作成功", "data": {'list' : get_all_goods_()}}
     return JsonResponse(re_json)
 
-@check_header
+
 def get_class(request):
     get_data = json.loads(request.body)
     type = get_data['type']
