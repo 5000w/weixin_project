@@ -220,4 +220,4 @@ def initialize_conpon(request):
 
     initialize_conpon_()
 
-    return JsonResponse("初始成功")
+    return JsonResponse({"msg": "操作成功"})
