@@ -238,4 +238,4 @@ def check_by_sid(request):
     else:
         re_json = {"succ": False, "msg": get_data_['mess'], "data": {'list': get_data_['data']}}
 
-    return JsonResponse(re_json)
+    return HttpResponse(json.dumps(re_json,ensure_ascii=False), content_type='application/json', charset='utf-8')
