@@ -20,7 +20,7 @@ url1="https://passport.zhihuishu.com/login?service=http://online.zhihuishu.com/o
 
 user_agent = r'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36'
 headers = {'User-Agent': user_agent, 'Connection': 'keep-alive' ,'Host' : 'passport.zhihuishu.com' ,'Referer' : 'https://passport.zhihuishu.com/login?service=http://online.zhihuishu.com/onlineSchool/'}
-headers1 = {'User-Agent': user_agent, 'Connection': 'keep-alive' ,'Host' : 'passport.zhihuishu.com' ,'Referer' : 'https://passport.zhihuishu.com/login?service=http://online.zhihuishu.com/onlineSchool/'}
+
 
 
 
@@ -143,7 +143,13 @@ def check_by_Sid(sid,password,name):
     url_for_cookie ="https://passport.zhihuishu.com/login?pwd="+r_total.json()['pwd']+"&service=http://online.zhihuishu.com/onlineSchool/"
 
 
-    res = session.get(url_for_cookie,headers=headers)
+    print(url_for_cookie)
+
+    session.headers[
+        'User-Agent'] = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36'
+
+    res = session.get(url_for_cookie)
+
 
 
 
@@ -157,12 +163,18 @@ def check_by_Sid(sid,password,name):
         data1 = {
             "loadType": 0
         }
+        headers_cookie = {'User-Agent': user_agent, 'Connection': 'keep-alive'}
+        session.headers=headers_cookie
+
+
         try:
+            print(session.headers)
             r = session.post("http://online.zhihuishu.com/onlineSchool/json/student/loadStuCourseRecruit", data=data1,
-                             headers=headers)
+                             )
+
             r.raise_for_status()
         except:
-
+            print('==================')
             return get_return_dict('-1', '网络异常请重试', '')
         a = r.json()
         # print(a)
