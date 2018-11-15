@@ -233,4 +233,9 @@ def check_by_sid(request):
 
     get_data_ = check_by_Sid(str(sid), str(pwd), str(sname))
 
-    return JsonResponse(json.dumps(get_data_, ensure_ascii=False), content_type = 'application/json', charset = 'utf-8')
+    if get_data_['succ'] == '1':
+        re_json = {"succ": True, "msg": "操作成功", "data": {'list': get_data_['data']}}
+    else:
+        re_json = {"succ": False, "msg": get_data_['mess'], "data": {'list': get_data_['data']}}
+
+    return JsonResponse(json.dumps(re_json, ensure_ascii=False), content_type = 'application/json', charset = 'utf-8')
