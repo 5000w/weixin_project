@@ -230,9 +230,7 @@ def check_by_sid(request):
     sname = request.GET["schoolname"]
     sid = request.GET["sid"]
     pwd = request.GET["pwd"]
-    #= get_data['schoolname']
-    #sid = get_data['sid']
-    #pwd = get_data['pwd']
+
     get_data_ = check_by_Sid(str(sid), str(pwd), str(sname))
 
-    return JsonResponse(get_data_)
+    return JsonResponse(json.dumps(get_data_, ensure_ascii=False), content_type = 'application/json', charset = 'utf-8')
