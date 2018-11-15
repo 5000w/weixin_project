@@ -28688,3 +28688,140 @@ November 15, 2018 - 10:14:39
 Django version 2.1, using settings 'weixin_market.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
+[15/Nov/2018 11:10:42] "GET /wx/check_by_sid?schoolname=%E5%92%B8%E9%98%B3%E5%B8%88%E8%8C%83%E5%AD%A6%E9%99%A2&sid=1710044209&pwd=123456a HTTP/1.0" 200 129
+[15/Nov/2018 11:11:20] "GET /wx/check_by_sid?schoolname=%E5%92%B8%E9%98%B3%E5%B8%88%E8%8C%83%E5%AD%A6%E9%99%A2&sid=1710044209&pwd=123456a HTTP/1.0" 200 129
+Internal Server Error: /wx/check_by_sid
+Traceback (most recent call last):
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin/views.py", line 236, in check_by_sid
+    get_data_ = check_by_Sid(str(sid), str(pwd), str(sname))
+  File "/home/ubuntu/weixin_project/code/weixin_market/scripts/zhihuishu.py", line 124, in check_by_Sid
+    school_id = list_schoohID[name_list.index(name)]['schoolId']
+ValueError: '学校名称' is not in list
+[15/Nov/2018 11:20:08] "GET /wx/check_by_sid?schoolname=%E5%AD%A6%E6%A0%A1%E5%90%8D%E7%A7%B0&sid=1710044209&pwd=123456a HTTP/1.0" 500 88887
+Not Found: /
+[15/Nov/2018 11:21:22] "GET / HTTP/1.0" 404 2031
+[15/Nov/2018 13:22:39] "GET /wx/check_by_sid?schoolname=%E5%92%B8%E9%98%B3%E5%B8%88%E8%8C%83%E5%AD%A6%E9%99%A2&sid=1710044209&pwd=123456a HTTP/1.0" 200 129
+Internal Server Error: /wx/check_by_sid
+Traceback (most recent call last):
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin/views.py", line 236, in check_by_sid
+    get_data_ = check_by_Sid(str(sid), str(pwd), str(sname))
+  File "/home/ubuntu/weixin_project/code/weixin_market/scripts/zhihuishu.py", line 143, in check_by_Sid
+    url_for_cookie ="https://passport.zhihuishu.com/login?pwd="+r_total.json()['pwd']+"&service=http://online.zhihuishu.com/onlineSchool/"
+KeyError: 'pwd'
+[15/Nov/2018 13:24:14] "GET /wx/check_by_sid?schoolname=%E5%92%B8%E9%98%B3%E5%B8%88%E8%8C%83%E5%AD%A6%E9%99%A2&sid=1710044209&pwd=12456a HTTP/1.0" 500 89801
+[15/Nov/2018 13:28:07] "GET /wx/check_by_sid?schoolname=%E5%92%B8%E9%98%B3%E5%B8%88%E8%8C%83%E5%AD%A6%E9%99%A2&sid=1710044209&pwd=123456a HTTP/1.0" 200 129
+Internal Server Error: /wx/check_by_sid
+Traceback (most recent call last):
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin/views.py", line 236, in check_by_sid
+    get_data_ = check_by_Sid(str(sid), str(pwd), str(sname))
+  File "/home/ubuntu/weixin_project/code/weixin_market/scripts/zhihuishu.py", line 143, in check_by_Sid
+    url_for_cookie ="https://passport.zhihuishu.com/login?pwd="+r_total.json()['pwd']+"&service=http://online.zhihuishu.com/onlineSchool/"
+KeyError: 'pwd'
+[15/Nov/2018 13:28:34] "GET /wx/check_by_sid?schoolname=%E5%92%B8%E9%98%B3%E5%B8%88%E8%8C%83%E5%AD%A6%E9%99%A2&sid=15529891017&pwd=123456a HTTP/1.0" 500 89823
+Internal Server Error: /wx/check_by_sid
+Traceback (most recent call last):
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin/views.py", line 236, in check_by_sid
+    get_data_ = check_by_Sid(str(sid), str(pwd), str(sname))
+  File "/home/ubuntu/weixin_project/code/weixin_market/scripts/zhihuishu.py", line 124, in check_by_Sid
+    school_id = list_schoohID[name_list.index(name)]['schoolId']
+ValueError: '' is not in list
+[15/Nov/2018 13:29:04] "GET /wx/check_by_sid?schoolname=&sid=15529891017&pwd=123456a HTTP/1.0" 500 88563
+Not Found: /
+[15/Nov/2018 15:25:51] "GET / HTTP/1.0" 404 2031
+Not Found: /favicon.ico
+[15/Nov/2018 15:25:53] "GET /favicon.ico HTTP/1.0" 404 2082
+Not Found: /
+[15/Nov/2018 15:28:34] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[15/Nov/2018 15:46:16] "GET / HTTP/1.0" 404 2031
+Internal Server Error: /wx/check_by_sid
+Traceback (most recent call last):
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin/views.py", line 236, in check_by_sid
+    get_data_ = check_by_Sid(str(sid), str(pwd), str(sname))
+  File "/home/ubuntu/weixin_project/code/weixin_market/scripts/zhihuishu.py", line 124, in check_by_Sid
+    school_id = list_schoohID[name_list.index(name)]['schoolId']
+ValueError: '学校名称' is not in list
+[15/Nov/2018 16:02:39] "GET /wx/check_by_sid?schoolname=%E5%AD%A6%E6%A0%A1%E5%90%8D%E7%A7%B0&sid=1710044209&pwd=123456a HTTP/1.0" 500 88887
+[15/Nov/2018 16:02:48] "GET /wx/check_by_sid?schoolname=%E5%92%B8%E9%98%B3%E5%B8%88%E8%8C%83%E5%AD%A6%E9%99%A2&sid=1710044209&pwd=123456a HTTP/1.0" 200 129
+[15/Nov/2018 16:08:00] "GET /wx/check_by_sid?schoolname=%E5%92%B8%E9%98%B3%E5%B8%88%E8%8C%83%E5%AD%A6%E9%99%A2&sid=1710044209&pwd=123456a HTTP/1.0" 200 129
+Not Found: /favicon.ico
+[15/Nov/2018 16:08:01] "GET /favicon.ico HTTP/1.0" 404 2082
+Internal Server Error: /wx/check_by_sid
+Traceback (most recent call last):
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin/views.py", line 236, in check_by_sid
+    get_data_ = check_by_Sid(str(sid), str(pwd), str(sname))
+  File "/home/ubuntu/weixin_project/code/weixin_market/scripts/zhihuishu.py", line 143, in check_by_Sid
+    url_for_cookie ="https://passport.zhihuishu.com/login?pwd="+r_total.json()['pwd']+"&service=http://online.zhihuishu.com/onlineSchool/"
+KeyError: 'pwd'
+[15/Nov/2018 16:08:01] "GET /wx/check_by_sid?schoolname=%E5%92%B8%E9%98%B3%E5%B8%88%E8%8C%83%E5%AD%A6%E9%99%A2&sid=17100442091&pwd=123456a HTTP/1.0" 500 90362
+Internal Server Error: /wx/check_by_sid
+Traceback (most recent call last):
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin/views.py", line 236, in check_by_sid
+    get_data_ = check_by_Sid(str(sid), str(pwd), str(sname))
+  File "/home/ubuntu/weixin_project/code/weixin_market/scripts/zhihuishu.py", line 143, in check_by_Sid
+    url_for_cookie ="https://passport.zhihuishu.com/login?pwd="+r_total.json()['pwd']+"&service=http://online.zhihuishu.com/onlineSchool/"
+KeyError: 'pwd'
+[15/Nov/2018 16:09:11] "GET /wx/check_by_sid?schoolname=%E5%92%B8%E9%98%B3%E5%B8%88%E8%8C%83%E5%AD%A6%E9%99%A2&sid=1710044209&pwd=12456a HTTP/1.0" 500 89799
+[15/Nov/2018 16:13:13] "GET /wx/check_by_sid?schoolname=%E5%92%B8%E9%98%B3%E5%B8%88%E8%8C%83%E5%AD%A6%E9%99%A2&sid=1710044209&pwd=123456a HTTP/1.0" 200 129
+Not Found: /
+[15/Nov/2018 16:15:59] "GET / HTTP/1.0" 404 2031
+Internal Server Error: /wx/check_by_sid
+Traceback (most recent call last):
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin/views.py", line 236, in check_by_sid
+    get_data_ = check_by_Sid(str(sid), str(pwd), str(sname))
+  File "/home/ubuntu/weixin_project/code/weixin_market/scripts/zhihuishu.py", line 124, in check_by_Sid
+    school_id = list_schoohID[name_list.index(name)]['schoolId']
+ValueError: '学校名称' is not in list
+[15/Nov/2018 16:30:10] "GET /wx/check_by_sid?schoolname=%E5%AD%A6%E6%A0%A1%E5%90%8D%E7%A7%B0&sid=1710044209&pwd=123456a HTTP/1.0" 500 88811
+Not Found: /favicon.ico
+[15/Nov/2018 16:30:11] "GET /favicon.ico HTTP/1.0" 404 2082
+[15/Nov/2018 16:30:34] "GET /wx/check_by_sid?schoolname=%E5%92%B8%E9%98%B3%E5%B8%88%E8%8C%83%E5%AD%A6%E9%99%A2&sid=1710044209&pwd=123456a HTTP/1.0" 200 129
+[15/Nov/2018 16:31:23] "GET /wx/check_by_sid?schoolname=%E5%92%B8%E9%98%B3%E5%B8%88%E8%8C%83%E5%AD%A6%E9%99%A2&sid=1710044209&pwd=123456a HTTP/1.0" 200 129
