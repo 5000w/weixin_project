@@ -51,7 +51,7 @@ def getWxPayOrdrID():
 
 def get_bodyData(openid, client_ip, price):
 
-    body = 'Mytest'  # 商品描述
+    body = '网络课程'  # 商品描述
     notify_url = 'https://www.saber-toothed.xyz/wx/payback'  # 支付成功的回调地址  可访问 不带参数
     nonce_str = getNonceStr()  # 随机字符串
     out_trade_no = getWxPayOrdrID()  # 商户订单号
