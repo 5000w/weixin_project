@@ -137,19 +137,37 @@ def get_all_goods(request):
 
 
 def get_class(request):
-    get_data = json.loads(request.body)
-    type = get_data['type']
-    phone_number = get_data['phone_number']
-    pwd = get_data['pwd']
 
-    if type == 1:
-        get_data_by_1 = get_data_by_zhihuishu(phone_number,pwd)
+    if request.method == 'GET':
+
+        phone_number = request.GET["phone_number"]
+
+        pwd = request.GET["pwd"]
+
+        get_data_by_1 = get_data_by_zhihuishu(phone_number, pwd)
         if get_data_by_1['succ'] == '1':
             re_json = {"succ": True, "msg": "操作成功", "data": {'list': get_data_by_1['data']}}
         else:
             re_json = {"succ": False, "msg": get_data_by_1['mess'], "data": {'list': get_data_by_1['data']}}
 
-    return JsonResponse(re_json)
+        return HttpResponse(json.dumps(re_json, ensure_ascii=False), content_type='application/json', charset='utf-8')
+
+    #post请求，提供给小老板，取body中的字段的方法不一样
+    elif request.method == 'POST':
+
+        get_data = json.loads(request.body)
+        type = get_data['type']
+        phone_number = get_data['phone_number']
+        pwd = get_data['pwd']
+
+        if type == 1:
+            get_data_by_1 = get_data_by_zhihuishu(phone_number,pwd)
+            if get_data_by_1['succ'] == '1':
+                re_json = {"succ": True, "msg": "操作成功", "data": {'list': get_data_by_1['data']}}
+            else:
+                re_json = {"succ": False, "msg": get_data_by_1['mess'], "data": {'list': get_data_by_1['data']}}
+
+        return JsonResponse(re_json)
 
 
 @check_header
