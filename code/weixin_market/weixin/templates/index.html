@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-{{ data }}
-=======
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,17 +8,17 @@
     <meta name="author" content="">
     <title>Free Bootstrap Error Template</title>
     <!-- Bootstrap core CSS -->
-    <link href="http://demo.cssmoban.com/cssthemes4/btts_49_bs-count-error/css/bootstrap.css" rel="stylesheet">
+    <link href="{% static "weixin\bootstrap.css" %}" rel="stylesheet">
     <!-- FONT AWESOME CSS -->
-    <link href="http://demo.cssmoban.com/cssthemes4/btts_49_bs-count-error/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="{% static "weixin\font-awesome.min.css" %}" rel="stylesheet"/>
     <!--GOOGLE FONT -->
-    <link href='http://fonts.googleapis.com/css?family=Nova+Flat' rel='stylesheet' type='text/css'>
+    <link href="{% static "weixin\css.css" %}" rel='stylesheet' type='text/css'>
     <!-- custom CSS here -->
-    <link href="http://demo.cssmoban.com/cssthemes4/btts_49_bs-count-error/css/style.css" rel="stylesheet"/>
+    <link href="{% static "weixin\style.css" %}" rel="stylesheet"/>
 </head>
 <body>
 <div class="adcenter">
-    <script src="http://www.cssmoban.com/include/new/ggad2_728x90.js"></script>
+    <script src="{% static "weixin\ggad2_728x90.js" %}"></script>
 </div>
 
 
@@ -40,13 +38,12 @@
 
 
 <!--Core JavaScript file  -->
-<script src="http://demo.cssmoban.com/cssthemes4/btts_49_bs-count-error/js/jquery-1.10.2.js"></script>
+<script src=""></script>
 <!--bootstrap JavaScript file  -->
-<script src="http://demo.cssmoban.com/cssthemes4/btts_49_bs-count-error/js/bootstrap.js"></script>
+<script src="{% static "weixin\bootstrap.js" %}"></script>
 <!--Count Number JavaScript file  -->
-<script src="http://demo.cssmoban.com/cssthemes4/btts_49_bs-count-error/js/countUp.js"></script>
+<script src="{% static "weixin\countUp.js" %}"></script>
 <!--Custom JavaScript file  -->
-<script src="http://demo.cssmoban.com/cssthemes4/btts_49_bs-count-error/js/custom.js"></script>
+<script src="{% static "weixin\custom.js" %}"></script>
 </body>
 </html>
->>>>>>> 168736f1fc72b81aa9cc5253b6669a166638b7af

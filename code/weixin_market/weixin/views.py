@@ -255,19 +255,6 @@ def check_by_sid(request):
     sid = request.GET.get("sid", None)
     pwd = request.GET.get("pwd", None)
 
-<<<<<<< HEAD
-    #get_data = json.loads(request.body)
-    sname = request.GET["schoolname"]
-    sid = request.GET["sid"]
-    pwd = request.GET["pwd"]
-    #= get_data['schoolname']
-    #sid = get_data['sid']
-    #pwd = get_data['pwd']
-    get_data_ = check_by_Sid(str(sid), str(pwd), str(sname))
-    print(get_data_)
-    return render(request, 'index.html',context=get_data_)
-    return JsonResponse(get_data_)
-=======
     # 判断是否参数正确
     if pwd is None or sid is None or sname is None:
 
@@ -284,4 +271,3 @@ def check_by_sid(request):
             re_json = {"succ": False, "msg": get_data_['mess'], "data": {'list': get_data_['data']}}
 
         return HttpResponse(json.dumps(re_json,ensure_ascii=False), content_type='application/json', charset='utf-8')
->>>>>>> 168736f1fc72b81aa9cc5253b6669a166638b7af
