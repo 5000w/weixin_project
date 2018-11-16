@@ -138,13 +138,20 @@ def get_all_goods(request):
 
 def get_class(request):
 
+    #提供给小老板，单独的get
     if request.method == 'GET':
 
-        phone_number = request.GET["phone_number"]
+        phone_number = request.GET.get("phone_number",None)
 
-        pwd = request.GET["pwd"]
+        pwd = request.GET.get("pwd", None)
+
+        #判断是否参数正确
+        if pwd is None | phone_number is None:
+            return HttpResponse("参数错误", content_type='application/json',
+                                charset='utf-8')
 
         get_data_by_1 = get_data_by_zhihuishu(phone_number, pwd)
+
         if get_data_by_1['succ'] == '1':
             re_json = {"succ": True, "msg": "操作成功", "data": {'list': get_data_by_1['data']}}
         else:
@@ -152,11 +159,15 @@ def get_class(request):
 
         return HttpResponse(json.dumps(re_json, ensure_ascii=False), content_type='application/json', charset='utf-8')
 
-    #post请求，提供给小老板，取body中的字段的方法不一样
+    #post请求，提供给小程序，取body中的字段的方法不一样
     elif request.method == 'POST':
 
         get_data = json.loads(request.body)
-        type = get_data['type']
+        type = get_data.get('type', None)
+
+        if type is None:
+
+
         phone_number = get_data['phone_number']
         pwd = get_data['pwd']
 
@@ -243,11 +254,14 @@ def initialize_conpon(request):
 
 def check_by_sid(request):
 
+    sname = request.GET.get("schoolname",None)
+    sid = request.GET("sid",None)
+    pwd = request.GET("pwd",None)
 
-    #get_data = json.loads(request.body)
-    sname = request.GET["schoolname"]
-    sid = request.GET["sid"]
-    pwd = request.GET["pwd"]
+    #判断是否有参数，如没有则返回参数错误
+    if pwd is None | sname is None | sname is None:
+        return HttpResponse("参数错误", content_type='application/json',
+                            charset='utf-8')
 
     get_data_ = check_by_Sid(str(sid), str(pwd), str(sname))
 
