@@ -151,7 +151,6 @@ def get_class(request):
                                 charset='utf-8')
 
         get_data_by_1 = get_data_by_zhihuishu(phone_number, pwd)
-
         if get_data_by_1['succ'] == '1':
             re_json = {"succ": True, "msg": "操作成功", "data": {'list': get_data_by_1['data']}}
         else:
@@ -164,9 +163,6 @@ def get_class(request):
 
         get_data = json.loads(request.body)
         type = get_data.get('type', None)
-
-        if type is None:
-
 
         phone_number = get_data['phone_number']
         pwd = get_data['pwd']
