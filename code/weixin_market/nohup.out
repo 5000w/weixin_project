@@ -28825,3 +28825,607 @@ Not Found: /favicon.ico
 [15/Nov/2018 16:30:11] "GET /favicon.ico HTTP/1.0" 404 2082
 [15/Nov/2018 16:30:34] "GET /wx/check_by_sid?schoolname=%E5%92%B8%E9%98%B3%E5%B8%88%E8%8C%83%E5%AD%A6%E9%99%A2&sid=1710044209&pwd=123456a HTTP/1.0" 200 129
 [15/Nov/2018 16:31:23] "GET /wx/check_by_sid?schoolname=%E5%92%B8%E9%98%B3%E5%B8%88%E8%8C%83%E5%AD%A6%E9%99%A2&sid=1710044209&pwd=123456a HTTP/1.0" 200 129
+[15/Nov/2018 16:51:28] "GET /wx/get_coupon HTTP/1.0" 200 83
+[15/Nov/2018 16:51:32] "GET /wx/get_order_detail HTTP/1.0" 200 601
+[15/Nov/2018 16:51:38] "GET /wx/get_coupon HTTP/1.0" 200 83
+[15/Nov/2018 16:51:38] "GET /wx/get_all_goods HTTP/1.0" 200 737
+[15/Nov/2018 16:51:38] "GET /wx/get_coupon HTTP/1.0" 200 83
+[15/Nov/2018 16:51:39] "GET /wx/get_all_goods HTTP/1.0" 200 737
+[15/Nov/2018 16:51:39] "GET /wx/get_coupon HTTP/1.0" 200 83
+[15/Nov/2018 16:51:39] "GET /wx/get_all_goods HTTP/1.0" 200 737
+[15/Nov/2018 16:51:40] "GET /wx/get_order_detail HTTP/1.0" 200 601
+[15/Nov/2018 16:51:44] "GET /wx/get_order_detail HTTP/1.0" 200 601
+Not Found: /
+[15/Nov/2018 17:03:22] "GET / HTTP/1.0" 404 2031
+[15/Nov/2018 17:38:59] "GET /wx/get_coupon HTTP/1.0" 200 83
+[15/Nov/2018 17:39:35] "GET /wx/get_coupon HTTP/1.0" 200 83
+[15/Nov/2018 17:41:34] "GET /wx/get_coupon HTTP/1.0" 200 83
+[15/Nov/2018 17:41:54] "POST /wx/get_class HTTP/1.0" 200 340
+[15/Nov/2018 17:44:34] "GET /wx/get_coupon HTTP/1.0" 200 83
+[15/Nov/2018 17:45:11] "GET /wx/get_coupon HTTP/1.0" 200 83
+[15/Nov/2018 17:45:47] "GET /wx/get_coupon HTTP/1.0" 200 83
+[15/Nov/2018 17:45:57] "GET /wx/get_coupon HTTP/1.0" 200 83
+[15/Nov/2018 17:46:01] "POST /wx/get_class HTTP/1.0" 200 327
+[15/Nov/2018 19:16:48] "GET /wx/get_coupon HTTP/1.0" 200 83
+[15/Nov/2018 19:16:51] "GET /wx/get_order_detail HTTP/1.0" 200 191
+[15/Nov/2018 19:17:00] "GET /wx/get_all_goods HTTP/1.0" 200 737
+[15/Nov/2018 19:17:02] "GET /wx/get_coupon HTTP/1.0" 200 83
+[15/Nov/2018 19:17:05] "GET /wx/get_all_goods HTTP/1.0" 200 737
+[15/Nov/2018 19:17:05] "GET /wx/get_coupon HTTP/1.0" 200 83
+[15/Nov/2018 19:17:06] "GET /wx/get_coupon HTTP/1.0" 200 83
+[15/Nov/2018 19:17:07] "GET /wx/get_order_detail HTTP/1.0" 200 191
+Not Found: /
+[15/Nov/2018 20:45:37] "GET / HTTP/1.0" 404 2031
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 15, 2018 - 11:10:26
+Django version 2.1, using settings 'weixin_market.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+https://passport.zhihuishu.com/login?pwd=681f48e24c684ffba8d7e6a693d339b1&service=http://online.zhihuishu.com/onlineSchool/
+{'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36', 'Connection': 'keep-alive'}
+https://passport.zhihuishu.com/login?pwd=4c6b68f0a168433291005371b526dd7a&service=http://online.zhihuishu.com/onlineSchool/
+{'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36', 'Connection': 'keep-alive'}
+https://passport.zhihuishu.com/login?pwd=8ff15d936ea3487d8f3f54d35fc1cb4f&service=http://online.zhihuishu.com/onlineSchool/
+{'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36', 'Connection': 'keep-alive'}
+https://passport.zhihuishu.com/login?pwd=576e6bb87308454fb35c56fbbe1939e0&service=http://online.zhihuishu.com/onlineSchool/
+{'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36', 'Connection': 'keep-alive'}
+https://passport.zhihuishu.com/login?pwd=717bcbb8d59041b8a83869697645c509&service=http://online.zhihuishu.com/onlineSchool/
+{'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36', 'Connection': 'keep-alive'}
+https://passport.zhihuishu.com/login?pwd=fde83e1818af48bfa529d13e2ba12ff3&service=http://online.zhihuishu.com/onlineSchool/
+{'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36', 'Connection': 'keep-alive'}
+https://passport.zhihuishu.com/login?pwd=177c1a5d5df74dc3abc90c1782aeef1b&service=http://online.zhihuishu.com/onlineSchool/
+{'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36', 'Connection': 'keep-alive'}
+https://passport.zhihuishu.com/login?pwd=fc1e30e42aa646599ace22ebae5eb82e&service=http://online.zhihuishu.com/onlineSchool/
+{'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36', 'Connection': 'keep-alive'}
+https://passport.zhihuishu.com/login?pwd=2e7217650b1d4963bbd33a549d6c8c43&service=http://online.zhihuishu.com/onlineSchool/
+{'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36', 'Connection': 'keep-alive'}
+onAnm5bLteUw5J0pAQygSewPzukg 
+ 1540730805 
+ onAnm5bLteUw5J0pAQygSewPzukg 
+ 1540730805
+onAnm5bLteUw5J0pAQygSewPzukg 
+ 1540730805 
+ onAnm5bLteUw5J0pAQygSewPzukg 
+ 1540730805
+onAnm5bLteUw5J0pAQygSewPzukg 
+ 1540730805 
+ onAnm5bLteUw5J0pAQygSewPzukg 
+ 1540730805
+onAnm5bLteUw5J0pAQygSewPzukg 
+ 1540730805 
+ onAnm5bLteUw5J0pAQygSewPzukg 
+ 1540730805
+onAnm5bLteUw5J0pAQygSewPzukg 
+ 1540730805 
+ onAnm5bLteUw5J0pAQygSewPzukg 
+ 1540730805
+onAnm5bLteUw5J0pAQygSewPzukg 
+ 1540730805 
+ onAnm5bLteUw5J0pAQygSewPzukg 
+ 1540730805
+onAnm5bLteUw5J0pAQygSewPzukg 
+ 1540730805 
+ onAnm5bLteUw5J0pAQygSewPzukg 
+ 1540730805
+onAnm5bLteUw5J0pAQygSewPzukg 
+ 1540730805 
+ onAnm5bLteUw5J0pAQygSewPzukg 
+ 1540730805
+onAnm5bLteUw5J0pAQygSewPzukg 
+ 1540730805 
+ onAnm5bLteUw5J0pAQygSewPzukg 
+ 1540730805
+onAnm5bLteUw5J0pAQygSewPzukg 
+ 1540730805 
+ onAnm5bLteUw5J0pAQygSewPzukg 
+ 1540730805
+onAnm5SCkfaj_ntTDap1qWAt4Hwo 
+ 1540535913 
+ onAnm5SCkfaj_ntTDap1qWAt4Hwo 
+ 1540535913
+onAnm5SCkfaj_ntTDap1qWAt4Hwo 
+ 1540535913 
+ onAnm5SCkfaj_ntTDap1qWAt4Hwo 
+ 1540535913
+onAnm5SCkfaj_ntTDap1qWAt4Hwo 
+ 1540535913 
+ onAnm5SCkfaj_ntTDap1qWAt4Hwo 
+ 1540535913
+onAnm5SCkfaj_ntTDap1qWAt4Hwo 
+ 1540535913 
+ onAnm5SCkfaj_ntTDap1qWAt4Hwo 
+ 1540535913
+onAnm5SCkfaj_ntTDap1qWAt4Hwo 
+ 1540535913 
+ onAnm5SCkfaj_ntTDap1qWAt4Hwo 
+ 1540535913
+onAnm5SCkfaj_ntTDap1qWAt4Hwo 
+ 1540535913 
+ onAnm5SCkfaj_ntTDap1qWAt4Hwo 
+ 1540535913
+onAnm5SCkfaj_ntTDap1qWAt4Hwo 
+ 1540535913 
+ onAnm5SCkfaj_ntTDap1qWAt4Hwo 
+ 1540535913
+onAnm5WPORJFIC4OsFHiphjp4D14 
+ 1542104721 
+ onAnm5WPORJFIC4OsFHiphjp4D14 
+ 1542104721
+onAnm5WPORJFIC4OsFHiphjp4D14 
+ 1542104721 
+ onAnm5WPORJFIC4OsFHiphjp4D14 
+ 1542104721
+onAnm5WPORJFIC4OsFHiphjp4D14 
+ 1542104721 
+ onAnm5WPORJFIC4OsFHiphjp4D14 
+ 1542104721
+onAnm5WPORJFIC4OsFHiphjp4D14 
+ 1542104721 
+ onAnm5WPORJFIC4OsFHiphjp4D14 
+ 1542104721
+onAnm5WPORJFIC4OsFHiphjp4D14 
+ 1542104721 
+ onAnm5WPORJFIC4OsFHiphjp4D14 
+ 1542104721
+onAnm5WPORJFIC4OsFHiphjp4D14 
+ 1542104721 
+ onAnm5WPORJFIC4OsFHiphjp4D14 
+ 1542104721
+onAnm5WPORJFIC4OsFHiphjp4D14 
+ 1542104721 
+ onAnm5WPORJFIC4OsFHiphjp4D14 
+ 1542104721
+onAnm5WPORJFIC4OsFHiphjp4D14 
+ 1542104721 
+ onAnm5WPORJFIC4OsFHiphjp4D14 
+ 1542104721
+Internal Server Error: /wx/check_by_sid
+Traceback (most recent call last):
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin/views.py", line 236, in check_by_sid
+    return JsonResponse(json.dumps(get_data_, ensure_ascii=False), content_type = 'application/json', charset = 'utf-8')
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[15/Nov/2018 20:59:56] "GET /wx/check_by_sid?schoolname=%E5%AD%A6%E6%A0%A1%E5%90%8D%E7%A7%B0&sid=1710044209&pwd=123456a HTTP/1.0" 500 69558
+Not Found: /favicon.ico
+[15/Nov/2018 20:59:57] "GET /favicon.ico HTTP/1.0" 404 2082
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 15, 2018 - 20:59:33
+Django version 2.1, using settings 'weixin_market.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Internal Server Error: /wx/check_by_sid
+Traceback (most recent call last):
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin/views.py", line 241, in check_by_sid
+    return JsonResponse(json.dumps(re_json, ensure_ascii=False), content_type = 'application/json', charset = 'utf-8')
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[15/Nov/2018 21:08:42] "GET /wx/check_by_sid?schoolname=%E5%AD%A6%E6%A0%A1%E5%90%8D%E7%A7%B0&sid=1710044209&pwd=123456a HTTP/1.0" 500 70169
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 15, 2018 - 21:08:32
+Django version 2.1, using settings 'weixin_market.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[15/Nov/2018 21:12:06] "GET /wx/check_by_sid?schoolname=%E5%AD%A6%E6%A0%A1%E5%90%8D%E7%A7%B0&sid=1710044209&pwd=123456a HTTP/1.0" 200 102
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 15, 2018 - 21:12:01
+Django version 2.1, using settings 'weixin_market.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[15/Nov/2018 21:17:16] "GET /wx/check_by_sid?schoolname=%E5%AD%A6%E6%A0%A1%E5%90%8D%E7%A7%B0&sid=1710044209&pwd=123456a HTTP/1.0" 200 75
+[15/Nov/2018 21:23:35] "GET /wx/check_by_sid?schoolname=%E5%92%B8%E9%98%B3%E5%B8%88%E8%8C%83%E5%AD%A6%E9%99%A2&sid=1710044209&pwd=123456a HTTP/1.0" 200 115
+[15/Nov/2018 21:23:53] "GET /wx/check_by_sid?schoolname=%E5%92%B8%E9%98%B3%E5%B8%88%E8%8C%83&sid=1710044209&pwd=123456a HTTP/1.0" 200 75
+[15/Nov/2018 21:24:10] "GET /wx/check_by_sid?schoolname=%E5%92%B8%E9%98%B3%E5%B8%88%E8%8C%83%E5%AD%A6%E9%99%A2&sid=171004420&pwd=123456a HTTP/1.0" 200 72
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 15, 2018 - 21:17:10
+Django version 2.1, using settings 'weixin_market.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+{'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36', 'Connection': 'keep-alive'}
+Not Found: /robots.txt
+[15/Nov/2018 21:28:12] "GET /robots.txt HTTP/1.0" 404 2079
+Not Found: /
+[15/Nov/2018 21:28:14] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[15/Nov/2018 21:28:15] "GET / HTTP/1.0" 404 2031
+Internal Server Error: /wx/check_by_sid
+Traceback (most recent call last):
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/utils/datastructures.py", line 77, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'schoolname'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin/views.py", line 248, in check_by_sid
+    sname = request.GET["schoolname"]
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/utils/datastructures.py", line 79, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'schoolname'
+[15/Nov/2018 21:28:24] "GET /wx/check_by_sid?phone_number=12312123&pwd=123456a HTTP/1.0" 500 72109
+[15/Nov/2018 21:28:59] "GET /wx/get_class?phone_number=12312123&pwd=123456a HTTP/1.0" 200 72
+[15/Nov/2018 21:29:23] "GET /wx/get_class?phone_number=12312123&pwd=123 HTTP/1.0" 200 72
+Internal Server Error: /wx/get_class
+Traceback (most recent call last):
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/utils/datastructures.py", line 77, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'pwd'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin/views.py", line 145, in get_class
+    pwd = request.GET["pwd"]
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/utils/datastructures.py", line 79, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'pwd'
+[15/Nov/2018 21:29:26] "GET /wx/get_class?phone_number=12312123&pw HTTP/1.0" 500 72326
+[15/Nov/2018 21:30:27] "GET /wx/get_class?phone_number=15529891017&pwd=123456a HTTP/1.0" 200 115
+[15/Nov/2018 21:31:03] "GET /wx/check_by_sid?schoolname=%E5%AD%A6%E6%A0%A1%E5%90%8D%E7%A7%B0&sid=1710044209&pwd=123456a HTTP/1.0" 200 75
+[15/Nov/2018 21:31:19] "GET /wx/check_by_sid?schoolname=%E5%92%B8%E9%98%B3%E5%B8%88%E8%8C%83%E5%AD%A6%E9%99%A2&sid=1710044209&pwd=123456a HTTP/1.0" 200 115
+[15/Nov/2018 21:31:37] "GET /wx/check_by_sid?schoolname=%E5%92%B8%E9%98%B3%E5%B8%88%E8%8C%83%E5%AD%A6%E9%99%A2&sid=1710044209&pwd=12346a HTTP/1.0" 200 72
+[15/Nov/2018 21:35:05] "GET /wx/get_class?phone_number=12312123&pwd=123456a HTTP/1.0" 200 72
+Not Found: /favicon.ico
+[15/Nov/2018 21:35:06] "GET /favicon.ico HTTP/1.0" 404 2082
+[15/Nov/2018 21:51:34] "GET /wx/check_by_sid?schoolname=%E5%92%B8%E9%98%B3%E5%B8%88%E8%8C%83%E5%AD%A6%E9%99%A2&sid=1703034214&pwd=788997 HTTP/1.0" 200 129
+[15/Nov/2018 21:55:47] "GET /wx/get_coupon HTTP/1.0" 200 83
+Not Found: /
+[16/Nov/2018 00:07:17] "GET / HTTP/1.0" 404 2031
+Not Found: /
+[16/Nov/2018 09:19:53] "GET / HTTP/1.0" 404 2031
+[16/Nov/2018 09:43:50] "GET /wx/get_coupon HTTP/1.0" 200 83
+[16/Nov/2018 09:44:22] "GET /wx/get_coupon HTTP/1.0" 200 83
+[16/Nov/2018 09:56:59] "GET /wx/get_coupon HTTP/1.0" 200 83
+[16/Nov/2018 09:57:15] "GET /wx/get_coupon HTTP/1.0" 200 83
+[16/Nov/2018 09:57:21] "POST /wx/get_class HTTP/1.0" 200 297
+[16/Nov/2018 09:58:05] "GET /wx/get_coupon HTTP/1.0" 200 83
+[16/Nov/2018 09:58:39] "GET /wx/get_coupon HTTP/1.0" 200 83
+[16/Nov/2018 09:58:43] "POST /wx/get_class HTTP/1.0" 200 226
+[16/Nov/2018 09:59:06] "GET /wx/get_coupon HTTP/1.0" 200 83
+[16/Nov/2018 10:01:40] "GET /wx/check_by_sid?schoolname=%E5%92%B8%E9%98%B3%E5%B8%88%E8%8C%83%E5%AD%A6%E9%99%A2&sid=1817054318&pwd=184912 HTTP/1.0" 200 72
+Not Found: /
+[16/Nov/2018 10:12:15] "GET / HTTP/1.0" 404 2031
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 15, 2018 - 21:27:25
+Django version 2.1, using settings 'weixin_market.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+{'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36', 'Connection': 'keep-alive'}
+{'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36', 'Connection': 'keep-alive'}
+onAnm5T5M1s3u74aS1w_DLpNZEpw 
+ 1540112009 
+ onAnm5T5M1s3u74aS1w_DLpNZEpw 
+ 1540112009
+onAnm5SCkfaj_ntTDap1qWAt4Hwo 
+ 1540535913 
+ onAnm5SCkfaj_ntTDap1qWAt4Hwo 
+ 1540535913
+onAnm5SCkfaj_ntTDap1qWAt4Hwo 
+ 1540535913 
+ onAnm5SCkfaj_ntTDap1qWAt4Hwo 
+ 1540535913
+onAnm5SCkfaj_ntTDap1qWAt4Hwo 
+ 1540535913 
+ onAnm5SCkfaj_ntTDap1qWAt4Hwo 
+ 1540535913
+onAnm5SCkfaj_ntTDap1qWAt4Hwo 
+ 1540535913 
+ onAnm5SCkfaj_ntTDap1qWAt4Hwo 
+ 1540535913
+onAnm5SCkfaj_ntTDap1qWAt4Hwo 
+ 1540535913 
+ onAnm5SCkfaj_ntTDap1qWAt4Hwo 
+ 1540535913
+onAnm5SCkfaj_ntTDap1qWAt4Hwo 
+ 1540535913 
+ onAnm5SCkfaj_ntTDap1qWAt4Hwo 
+ 1540535913
+onAnm5SCkfaj_ntTDap1qWAt4Hwo 
+ 1540535913 
+ onAnm5SCkfaj_ntTDap1qWAt4Hwo 
+ 1540535913
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x7f79036ef488>
+Traceback (most recent call last):
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/utils/autoreload.py", line 225, in wrapper
+    fn(*args, **kwargs)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/management/base.py", line 379, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/management/base.py", line 366, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/checks/registry.py", line 71, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/urls/resolvers.py", line 396, in check
+    for pattern in self.url_patterns:
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/utils/functional.py", line 37, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/urls/resolvers.py", line 533, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/utils/functional.py", line 37, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/urls/resolvers.py", line 526, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin_market/urls.py", line 20, in <module>
+    path('wx/', include('weixin.urls')),
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin/urls.py", line 2, in <module>
+    from . import views
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin/views.py", line 171
+    phone_number = get_data['phone_number']
+               ^
+IndentationError: expected an indented block
+Performing system checks...
+
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x7fa8908e7488>
+Traceback (most recent call last):
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/utils/autoreload.py", line 225, in wrapper
+    fn(*args, **kwargs)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/management/base.py", line 379, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/management/base.py", line 366, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/checks/registry.py", line 71, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/urls/resolvers.py", line 396, in check
+    for pattern in self.url_patterns:
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/utils/functional.py", line 37, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/urls/resolvers.py", line 533, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/utils/functional.py", line 37, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/urls/resolvers.py", line 526, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin_market/urls.py", line 20, in <module>
+    path('wx/', include('weixin.urls')),
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin/urls.py", line 2, in <module>
+    from . import views
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin/views.py", line 171
+    phone_number = get_data['phone_number']
+               ^
+IndentationError: expected an indented block
+Performing system checks...
+
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x7f240e638488>
+Traceback (most recent call last):
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/utils/autoreload.py", line 225, in wrapper
+    fn(*args, **kwargs)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/management/base.py", line 379, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/management/base.py", line 366, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/checks/registry.py", line 71, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/urls/resolvers.py", line 396, in check
+    for pattern in self.url_patterns:
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/utils/functional.py", line 37, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/urls/resolvers.py", line 533, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/utils/functional.py", line 37, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/urls/resolvers.py", line 526, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin_market/urls.py", line 20, in <module>
+    path('wx/', include('weixin.urls')),
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin/urls.py", line 2, in <module>
+    from . import views
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin/views.py", line 171
+    phone_number = get_data['phone_number']
+               ^
+IndentationError: expected an indented block
+Performing system checks...
+
+Internal Server Error: /wx/get_class
+Traceback (most recent call last):
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin/views.py", line 149, in get_class
+    if pwd is None | phone_number is None:
+TypeError: unsupported operand type(s) for |: 'NoneType' and 'NoneType'
+[16/Nov/2018 11:07:51] "GET /wx/get_class HTTP/1.0" 500 63793
+Internal Server Error: /wx/check_by_sid
+Traceback (most recent call last):
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin/views.py", line 259, in check_by_sid
+    if pwd is None | sid is None |sname is None:
+TypeError: unsupported operand type(s) for |: 'NoneType' and 'str'
+[16/Nov/2018 11:10:25] "GET /wx/check_by_sid?schoolname=%E5%92%B8%E9%98%B3%E5%B8%88%E8%8C%83%E5%AD%A6%E9%99%A2&sid=17100442091&pwd=123456a HTTP/1.0" 500 65594
+Not Found: /favicon.ico
+[16/Nov/2018 11:10:26] "GET /favicon.ico HTTP/1.0" 404 2082
+Internal Server Error: /wx/check_by_sid
+Traceback (most recent call last):
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.pyenv/versions/3.7.0/lib/python3.7/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/weixin_project/code/weixin_market/weixin/views.py", line 259, in check_by_sid
+    if pwd is None | sid is None |sname is None:
+TypeError: unsupported operand type(s) for |: 'NoneType' and 'str'
+[16/Nov/2018 11:10:50] "GET /wx/check_by_sid?schoolname=%E5%92%B8%E9%98%B3%E5%B8%88%E8%8C%83%E5%AD%A6%E9%99%A2&sid=17100442091&pwd=123456a HTTP/1.0" 500 65594
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 16, 2018 - 11:07:23
+Django version 2.1, using settings 'weixin_market.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[16/Nov/2018 11:14:36] "GET /wx/get_class HTTP/1.0" 200 12
+[16/Nov/2018 11:15:37] "GET /wx/get_class?phone_number=12312123&pwd=123456a HTTP/1.0" 200 72
+[16/Nov/2018 11:16:08] "GET /wx/get_class?phone_num HTTP/1.0" 200 12
+[16/Nov/2018 11:21:05] "GET /wx/get_class?phone_num HTTP/1.0" 200 12
+[16/Nov/2018 11:21:06] "GET /wx/get_class?phone_num HTTP/1.0" 200 12
+[16/Nov/2018 11:21:07] "GET /wx/get_class?phone_num HTTP/1.0" 200 12
+[16/Nov/2018 11:27:37] "GET /wx/get_class?phone_number=12312123&pwd=123456a HTTP/1.0" 200 72
+[16/Nov/2018 11:27:41] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 12
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 16, 2018 - 11:14:30
+Django version 2.1, using settings 'weixin_market.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[16/Nov/2018 11:41:06] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 1855
+[16/Nov/2018 11:41:07] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 1855
+[16/Nov/2018 11:41:07] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 1855
+[16/Nov/2018 11:41:07] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 1855
+[16/Nov/2018 11:41:08] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 1855
+[16/Nov/2018 11:41:08] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 1855
+[16/Nov/2018 11:41:08] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 1855
+[16/Nov/2018 11:41:08] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 1855
+[16/Nov/2018 11:41:09] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 1855
+[16/Nov/2018 11:41:11] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 1855
+[16/Nov/2018 11:41:11] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 1855
+[16/Nov/2018 11:41:11] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 1855
+[16/Nov/2018 11:41:12] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 1855
+[16/Nov/2018 11:41:14] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 1855
+[16/Nov/2018 11:41:14] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 1855
+[16/Nov/2018 11:41:15] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 1855
+[16/Nov/2018 11:41:15] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 1855
+[16/Nov/2018 11:41:15] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 1855
+[16/Nov/2018 11:41:16] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 1855
+[16/Nov/2018 11:41:16] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 1855
+[16/Nov/2018 11:41:16] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 1855
+[16/Nov/2018 11:41:16] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 1855
+[16/Nov/2018 11:41:16] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 1855
+[16/Nov/2018 11:41:17] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 1855
+[16/Nov/2018 11:41:17] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 1855
+[16/Nov/2018 11:41:17] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 1855
+[16/Nov/2018 12:27:31] "POST /wx/login HTTP/1.0" 200 97
+[16/Nov/2018 12:27:31] "GET /wx/get_coupon HTTP/1.0" 200 83
+Not Found: /
+[16/Nov/2018 14:03:06] "GET / HTTP/1.0" 404 2031
+[16/Nov/2018 14:11:18] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 1855
+[16/Nov/2018 14:11:21] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 1855
+[16/Nov/2018 14:11:22] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 1855
+[16/Nov/2018 14:11:22] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 1855
+[16/Nov/2018 14:11:22] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 1855
+[16/Nov/2018 14:12:00] "GET /wx/get_class?phone_number=12312123&p HTTP/1.0" 200 1855
+[16/Nov/2018 14:15:22] "GET /wx/get_coupon HTTP/1.0" 200 83
+[16/Nov/2018 14:16:25] "GET /wx/get_coupon HTTP/1.0" 200 83
+[16/Nov/2018 14:16:33] "POST /wx/get_class HTTP/1.0" 200 96
+[16/Nov/2018 14:16:47] "GET /wx/get_coupon HTTP/1.0" 200 83
+[16/Nov/2018 14:16:50] "POST /wx/get_class HTTP/1.0" 200 252
+[16/Nov/2018 14:21:46] "GET /wx/check_by_sid?schoolname=%E5%92%B8%E9%98%B3%E5%B8%88%E8%8C%83%E5%AD%A6%E9%99%A2&sid=17100442091&pwd=123456a HTTP/1.0" 200 1855
+[16/Nov/2018 14:35:38] "GET /wx/check_by_sid?schoolname=%E5%92%B8%E9%98%B3%E5%B8%88%E8%8C%83%E5%AD%A6%E9%99%A2&sid=17100442091&pwd=123456a HTTP/1.0" 200 1855
+Not Found: /favicon.ico
+[16/Nov/2018 14:35:38] "GET /favicon.ico HTTP/1.0" 404 2082
+[16/Nov/2018 14:38:54] "GET /wx/check_by_sid?schoolname=%E5%92%B8%E9%98%B3%E5%B8%88%E8%8C%83%E5%AD%A6%E9%99%A2&sid=17100442091&pwd=123456a HTTP/1.0" 200 1855
