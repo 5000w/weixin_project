@@ -111,17 +111,24 @@ def check_by_Sid(sid,password,name):
 
 
     try:
+        #获得所有的学校列表
         r = session.post(url_school_list, timeout=30)
         r.raise_for_status()
     except:
 
         return get_return_dict('-1', '网络异常请重试', '')
 
+    #从接口中拿到所有的学校ID
     list_schoohID = r.json()['listSchool']
 
     name_list = [x['name'] for x in list_schoohID]
 
-    school_id = list_schoohID[name_list.index(name)]['schoolId']
+    #从名字列表中，根据name 得到index ---然后找到ID
+    try:
+        school_id = list_schoohID[name_list.index(name)]['schoolId']
+    except:
+        return get_return_dict('-1', '没有找到对应的学校', '')
+
 
     url_for_login = "https://passport.zhihuishu.com/user/validateCodeAndPassword"
 
@@ -133,29 +140,18 @@ def check_by_Sid(sid,password,name):
     }
 
     r_total = session.post(url_for_login,data=value,headers=headers)
-
-
-
-
-
-
-
-    url_for_cookie ="https://passport.zhihuishu.com/login?pwd="+r_total.json()['pwd']+"&service=http://online.zhihuishu.com/onlineSchool/"
-
-
-    print(url_for_cookie)
+    try:
+        url_for_cookie ="https://passport.zhihuishu.com/login?pwd="+r_total.json()['pwd']+"&service=http://online.zhihuishu.com/onlineSchool/"
+    except:
+        return get_return_dict('-1', '账号或者密码错误', '')
 
     session.headers[
         'User-Agent'] = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36'
 
     res = session.get(url_for_cookie)
 
-
-
-
     cookiedict = requests.utils.dict_from_cookiejar(session.cookies)
-
-
+    #再次判断是否登录成功
 
     if 'CASLOGC' not in cookiedict.keys():
         return get_return_dict('-1','账号或者密码错误','')
@@ -165,7 +161,6 @@ def check_by_Sid(sid,password,name):
         }
         headers_cookie = {'User-Agent': user_agent, 'Connection': 'keep-alive'}
         session.headers=headers_cookie
-
 
         try:
             print(session.headers)
@@ -177,7 +172,7 @@ def check_by_Sid(sid,password,name):
             print('==================')
             return get_return_dict('-1', '网络异常请重试', '')
         a = r.json()
-        # print(a)
+
         list_data = []
         for b in a["maps"]:
             dict = {}
