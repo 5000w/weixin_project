@@ -234,5 +234,6 @@ def check_by_sid(request):
     #sid = get_data['sid']
     #pwd = get_data['pwd']
     get_data_ = check_by_Sid(str(sid), str(pwd), str(sname))
-
+    print(get_data_)
+    return render(request, 'index.html',context=get_data_)
     return JsonResponse(get_data_)
