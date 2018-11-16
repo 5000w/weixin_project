@@ -146,7 +146,7 @@ def get_class(request):
         pwd = request.GET.get("pwd", None)
 
         #判断是否参数正确
-        if pwd is None | phone_number is None:
+        if pwd is None or phone_number is None:
             return HttpResponse("参数错误", content_type='application/json',
                                 charset='utf-8')
 
@@ -256,7 +256,7 @@ def check_by_sid(request):
     sid = request.GET.get("sid",None)
     pwd = request.GET.get("pwd",None)
     # 判断是否参数正确
-    if pwd is None | sid is None |sname is None:
+    if pwd is None or sid is None or sname is None:
         return HttpResponse("参数错误", content_type='application/json',
                             charset='utf-8')
     else:
