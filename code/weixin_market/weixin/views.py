@@ -147,8 +147,8 @@ def get_class(request):
 
         #判断是否参数正确
         if pwd is None or phone_number is None:
-            return HttpResponse("参数错误", content_type='application/json',
-                                charset='utf-8')
+            
+            return render(request, 'index.html')
 
         get_data_by_1 = get_data_by_zhihuishu(phone_number, pwd)
         if get_data_by_1['succ'] == '1':
@@ -250,20 +250,22 @@ def initialize_conpon(request):
 
 def check_by_sid(request):
 
+    # get_data = json.loads(request.body)
+    sname = request.GET.get("sname", None)
+    sid = request.GET.get("sid", None)
+    pwd = request.GET.get("pwd", None)
 
-    #get_data = json.loads(request.body)
-    sname = request.GET.get("sname",None)
-    sid = request.GET.get("sid",None)
-    pwd = request.GET.get("pwd",None)
     # 判断是否参数正确
     if pwd is None or sid is None or sname is None:
-        return HttpResponse("参数错误", content_type='application/json',
-                            charset='utf-8')
+
+        return render(request,'index.html')
+        #return HttpResponse("参数错误", content_type='application/json',charset='utf-8')
     else:
 
         get_data_ = check_by_Sid(str(sid), str(pwd), str(sname))
 
         if get_data_['succ'] == '1':
+
             re_json = {"succ": True, "msg": "操作成功", "data": {'list': get_data_['data']}}
         else:
             re_json = {"succ": False, "msg": get_data_['mess'], "data": {'list': get_data_['data']}}
