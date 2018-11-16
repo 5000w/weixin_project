@@ -145,10 +145,10 @@ def get_class(request):
 
         pwd = request.GET.get("pwd", None)
 
-        # #判断是否参数正确
-        # if pwd is None | phone_number is None:
-        #     return HttpResponse("参数错误", content_type='application/json',
-        #                         charset='utf-8')
+        #判断是否参数正确
+        if pwd is None | phone_number is None:
+            return HttpResponse("参数错误", content_type='application/json',
+                                charset='utf-8')
 
         get_data_by_1 = get_data_by_zhihuishu(phone_number, pwd)
 
@@ -254,14 +254,11 @@ def initialize_conpon(request):
 
 def check_by_sid(request):
 
-    sname = request.GET.get("schoolname",None)
-    sid = request.GET("sid",None)
-    pwd = request.GET("pwd",None)
 
-    # #判断是否有参数，如没有则返回参数错误
-    # if pwd is None | sid is None | sname is None:
-    #     return HttpResponse("参数错误", content_type='application/json',
-    #                         charset='utf-8')
+    #get_data = json.loads(request.body)
+    sname = request.GET["schoolname"]
+    sid = request.GET["sid"]
+    pwd = request.GET["pwd"]
 
     get_data_ = check_by_Sid(str(sid), str(pwd), str(sname))
 
